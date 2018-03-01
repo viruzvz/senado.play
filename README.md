@@ -1,4 +1,4 @@
-<h1>Setting up Webpack, Babel, React, Bootstrap 4</h1>
+<h1>Setting up Webpack, Babel, React, Bootstrap 4, Reactstrap</h1>
 
 <p>Template Senado.Play</p>
 
