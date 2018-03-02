@@ -1,6 +1,6 @@
-<h1>Setting up Webpack, Babel, React, Bootstrap 4, Reactstrap</h1>
+<h1>Setting up Webpack 3, Babel, React, Bootstrap 4, ReactStrap</h1>
 
-<p>Template Senado.Play</p>
+<p>Template Senado.Play Created 2018</p>
 
 <pre>to start <strong>'yarn dev'</strong> to compile <strong>'yarn build'</strong></pre>
 
