@@ -31,43 +31,39 @@ export default class NavbarTop extends React.Component {
   }
   render() {
     return (
+      <div className='bg-black'>
       <Container>
         <Row>
         <Col>
-        <Navbar color="faded" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <Navbar color="faded" dark expand="md">
+          <NavbarBrand href="/">Senado Play</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="mx-auto" navbar>
+              <NavItem>
+                <NavLink href="#">Ao vivo</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">Plenário e Comissões</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">Senadores</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">Programas</NavLink>
+              </NavItem>
+            </Nav>          
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/components/">Buscar</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu >
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
         </Col>
         </Row>
       </Container>
+      </div>
     );
   }
 }
