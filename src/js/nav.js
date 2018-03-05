@@ -1,7 +1,8 @@
 import React from 'react';
+import InputSearch from './inputSearch.js';
 import {
-  Container, 
-  Row, 
+  Container,
+  Row,
   Col,
   Collapse,
   Navbar,
@@ -10,6 +11,9 @@ import {
   Nav,
   NavItem,
   NavLink,
+  InputGroup,
+  InputGroupAddon,
+  Input,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -40,22 +44,22 @@ export default class NavbarTop extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mx-auto" navbar>
-              <NavItem>
+              <NavItem className='mr-2'>
                 <NavLink href="#">Ao vivo</NavLink>
               </NavItem>
-              <NavItem>
+              <NavItem className='mr-2'>
                 <NavLink href="#">Plenário e Comissões</NavLink>
               </NavItem>
-              <NavItem>
+              <NavItem className='mr-2'>
                 <NavLink href="#">Senadores</NavLink>
               </NavItem>
-              <NavItem>
+              <NavItem className='mr-2'>
                 <NavLink href="#">Programas</NavLink>
               </NavItem>
-            </Nav>          
+            </Nav>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Buscar</NavLink>
+                <InputSearch></InputSearch>
               </NavItem>
             </Nav>
           </Collapse>
