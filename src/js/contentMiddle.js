@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import NavSec from './nav.js';
 
 export default class ContentMiddle extends React.Component {
   render() {
@@ -7,9 +8,12 @@ export default class ContentMiddle extends React.Component {
 		<div className='bg-gray-basic'>
 			<Container>
 				<Row>
-					<Col className='white'>a</Col>
-					<Col className='white'>b</Col>
-					<Col className='white'>c</Col>
+					<NavSec></NavSec>
+				</Row>
+				<Row>
+					<Col className='white'>Card</Col>
+					<Col className='white'>Card</Col>
+					<Col className='white'>Card</Col>
 				</Row>
 			</Container>
 		</div>
