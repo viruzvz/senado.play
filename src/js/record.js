@@ -4,9 +4,9 @@ import '../styles/components/record.scss';
 export default class Record extends React.Component {
   render() {
     return (
-      <div className='d-flex d-inline-flex pr-2 pl-2 bg-gray-basic align-items-center'>
-        <div className='mr-2 record bg-red-cord'></div>
-        <div className='white'>AO VIVO</div>
+      <div className='record bg-gray-basic'>
+        <div className='mr-1 record-live ml-1 bg-red-cord'></div>
+        <span className='cut size--small ml-1 mr-1'>AO VIVO</span>
       </div>
     );
   }

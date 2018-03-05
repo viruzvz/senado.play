@@ -1,7 +1,11 @@
 // Component Record, Live, Ao vivo
 .record {
-  width: 15px;
-  height: 15px;
-  display: inline-block;
-  border-radius: 50%;
+	padding: 0.375rem 0.75rem;
+	display: inline-block;
+}
+.record-live{
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	border-radius: 50%;	
 }

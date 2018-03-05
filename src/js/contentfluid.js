@@ -1,18 +1,23 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Record from './record.js';
+import Share from './share.js';
+import VideoEmbed from './videoEmbed.js';
 
 export default class ContentFluid extends React.Component {
   render() {
     return (
-	<Container fluid>
-    <Container>
-		<Row>
-			<Col><Record></Record></Col>
-		</Row>
-    </Container>
-	</Container>
-
+    	<div className='bg-gray-fox pt-3'>
+        <Container>
+      		<Row>
+      			<Col className='mb-3'><Record></Record></Col>
+            <Col className='text-right mb-3'><Share></Share></Col>
+      		</Row>
+          <Row>
+            <Col className='mb-3'><VideoEmbed></VideoEmbed></Col>
+          </Row>
+        </Container>
+    	</div>
     );
   }
 }

@@ -1,0 +1,24 @@
+.search-sty {
+	input[type='search'] {
+		border-radius: 0 ;
+		background-color: #313131;
+		color: #ccc;
+		border-left: none;
+		border-top: 1px solid #555;
+		border-bottom: 1px solid #555;
+		border-right: 1px solid #555;
+		&:focus {
+			background-color: #ffffff !important;
+		}
+	}
+	span {
+		border-radius: 0 !important;
+		background-color: #313131;
+		color: #ccc;
+		border-left: 1px solid #555;
+		border-top: 1px solid #555;
+		border-bottom: 1px solid #555;
+		border-right: 1px solid #555;
+
+	}
+}
