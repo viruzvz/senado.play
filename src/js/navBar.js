@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import InputSearch from './inputSearch.js';
 import {
   Container,
@@ -18,6 +19,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
+  import ReactSVG from 'react-svg';
 
 export default class NavbarTop extends React.Component {
   constructor(props) {
@@ -40,20 +42,28 @@ export default class NavbarTop extends React.Component {
         <Row>
           <Col>
             <Navbar color="faded" dark expand="md" className='px-0'>
-              <NavbarBrand href="/">Senado Play</NavbarBrand>
+              <NavbarBrand className='m-0 p-0' href="/">
+                <ReactSVG
+                    path='../assets/logo.svg'
+                    callback={svg => console.log(svg)}
+                    className="img-fluid"
+                    wrapperClassName="wrapper-class-name"
+                    style={{width: 100}}
+                  />
+              </NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="mx-auto" navbar>
-                  <NavItem className='mr-2'>
+                  <NavItem className='mr-2 text-uppercase size--regular'>
                     <NavLink href="#">Ao vivo</NavLink>
                   </NavItem>
-                  <NavItem className='mr-2'>
+                  <NavItem className='mr-2 text-uppercase size--regular'>
                     <NavLink href="#">Plenário e Comissões</NavLink>
                   </NavItem>
-                  <NavItem className='mr-2'>
+                  <NavItem className='mr-2 text-uppercase size--regular'>
                     <NavLink href="#">Senadores</NavLink>
                   </NavItem>
-                  <NavItem className='mr-2'>
+                  <NavItem className='mr-2 text-uppercase size--regular'>
                     <NavLink href="#">Programas</NavLink>
                   </NavItem>
                 </Nav>
