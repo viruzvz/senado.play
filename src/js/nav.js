@@ -4,8 +4,7 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 export default class NavSec extends React.Component {
   render() {
     return (
-      <div>
-        <Nav>
+        <Nav className='mb-3'>
           <NavItem>
             <NavLink className='text-uppercase font-weight-bold white size--regular' href="#">Menu Body</NavLink>
           </NavItem>
@@ -16,7 +15,6 @@ export default class NavSec extends React.Component {
             <NavLink className='text-uppercase font-weight-bold cut size--regular' href="#">Menu Body</NavLink>
           </NavItem>
         </Nav>
-      </div>
     );
   }
 }
