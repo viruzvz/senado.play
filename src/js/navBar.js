@@ -41,7 +41,7 @@ export default class NavbarTop extends React.Component {
       <Container>
         <Row>
           <Col>
-            <Navbar color="faded" dark expand="md" className='px-0'>
+            <Navbar color="faded" color='black' dark expand="md" className='px-0'>
               <NavbarBrand className='m-0 p-0' href="/">
                 <ReactSVG
                     path='../assets/logo.svg'

@@ -1,5 +1,5 @@
 // SYSTEM COLORS 
-
+.negative {color: $negative;}
 .black {color: $black;}
 .gray-dark {color: $gray-dark;}
 .gray-fox {color: $gray-fox;}
@@ -9,6 +9,7 @@
 .blue-play {color: $blue-play;}
 .red-cord {color: $red-cord;}
 
+.bg-negative {background-color: $negative;}
 .bg-black {background-color: $black;}
 .bg-gray-dark {background-color: $gray-dark;}
 .bg-gray-fox {background-color: $gray-fox;}

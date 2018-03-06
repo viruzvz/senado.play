@@ -24,11 +24,9 @@ export default class Share extends React.Component {
           COMPARTILHAR
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem header>Facebook</DropdownItem>
-          <DropdownItem disabled>Twitter</DropdownItem>
+          <DropdownItem>Facebook</DropdownItem>
+          <DropdownItem>Twitter</DropdownItem>
           <DropdownItem>Instagram</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>Another Action</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );
