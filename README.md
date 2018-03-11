@@ -5,3 +5,5 @@
 <pre>to start <strong>'yarn dev'</strong> to compile <strong>'yarn build'</strong></pre>
 
 <pre>start localhost:3000</pre>
+
+<pre>Make it easy</pre>
