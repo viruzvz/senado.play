@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 import NavSec from './nav.js';
+import Divider from './divider.js';
 
 export default class Footer extends React.Component {
   render() {
     return (
     	<div>
-    	<div className='p-2 bg-gray-fox'></div>
+    	<Divider className='p-2 bg-gray-fox'></Divider>
 		<div className='bg-black py-3'>
 			<Container>
 				<Row>

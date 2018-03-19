@@ -12,7 +12,7 @@ export default class TemplateApp extends React.Component {
 		<div>
 			<NavbarTop></NavbarTop>
 			<ContentFluid></ContentFluid>
-			<Divider></Divider>
+			<Divider className='divider bg-blue-play'></Divider>
 			<ContentMiddle></ContentMiddle>
 			<Footer></Footer>
 		</div>

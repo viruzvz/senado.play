@@ -7,7 +7,7 @@ export default class Cards extends React.Component {
   return (
     <div>
       <Card className='rounded-0 border-0 mb-3'>
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+        <CardImg top width="100%" src={this.props.src} alt="Card image cap" />
         <CardBody className='bg-black'>
           <CardTitle className='size--regular red-cord'>{this.props.title}</CardTitle>
           <CardSubtitle className='size--small cut'>{this.props.subtitle}</CardSubtitle>

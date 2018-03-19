@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import 'bootstrap';
 import '../styles/main.scss';
 import '../styles/main.less';
-import TemplateApp from './template.js';
+import TemplateApp from './components/template.js';
 
 export default class App extends Component {
   render() {

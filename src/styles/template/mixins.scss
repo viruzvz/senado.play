@@ -1,0 +1,7 @@
+@mixin hoverplay-focus {
+	&:hover,
+	&:focus
+	{
+		color: #fff;
+	}
+}

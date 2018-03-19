@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import InputSearch from './inputSearch.js';
+import '../../styles/components/navbar-play.scss';
 import {
   Container,
   Row,
@@ -21,10 +22,10 @@ import {
   DropdownItem } from 'reactstrap';
   import ReactSVG from 'react-svg';
 
+
 export default class NavbarTop extends React.Component {
   constructor(props) {
     super(props);
-
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
@@ -35,16 +36,17 @@ export default class NavbarTop extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
     return (
       <div className='bg-black'>
       <Container>
         <Row>
           <Col>
-            <Navbar color="faded" color='black' dark expand="md" className='px-0'>
+            <Navbar color="faded" color='black' expand="md" className='navbar-play'>
               <NavbarBrand className='m-0 p-0' href="/">
                 <ReactSVG
-                    path='../assets/logo.svg'
+                    path='../../assets/logo.svg'
                     callback={svg => console.log(svg)}
                     className="img-fluid"
                     wrapperClassName="wrapper-class-name"
@@ -54,7 +56,7 @@ export default class NavbarTop extends React.Component {
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="mx-auto" navbar>
-                  <NavItem className='mr-2 text-uppercase size--regular'>
+                  <NavItem active className='mr-2 text-uppercase size--regular'>
                     <NavLink href="#">Ao vivo</NavLink>
                   </NavItem>
                   <NavItem className='mr-2 text-uppercase size--regular'>
