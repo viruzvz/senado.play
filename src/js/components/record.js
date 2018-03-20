@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../styles/components/record.scss';
 
 export default class Record extends React.Component {
   render() {

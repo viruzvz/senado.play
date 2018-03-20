@@ -1,4 +1,10 @@
 @import './vendors/bootstrap';
+
 @import '/template/variables';
 @import '/template/template';
 @import '/template/mixins';
+
+@import '/components/divider';
+@import '/components/inputsearch';
+@import '/components/navbar-play';
+@import '/components/record';

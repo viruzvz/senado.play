@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import InputSearch from './inputSearch.js';
-import '../../styles/components/navbar-play.scss';
+
 import {
   Container,
   Row,

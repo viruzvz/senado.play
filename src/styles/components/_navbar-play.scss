@@ -2,19 +2,19 @@
   padding: 0;
   .navbar-nav {
     .nav-link {
-      color: #ccc;
+      color: $cut;
       padding-bottom: 1rem;
       padding-top: 1rem;
       &:hover,
       &:focus {
-        color:#fff; 
+        color:$white;
       }
     }
     .show > .nav-link,
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: #fff;
+      color: $white;
       position: relative;
       font-weight: bold;
       &:after {
@@ -24,7 +24,7 @@
         height: 3px;
         bottom: 0;
         left:0;
-        background-color: #0095DA;
+        background-color: $blue-play;
       }
     }
   }
