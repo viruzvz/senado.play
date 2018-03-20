@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
+import { InputGroup, InputGroupText, FormGroup, InputGroupAddon, Input } from 'reactstrap';
 
 export default class InputSearch extends React.Component {
   render() {
   return (
-    <div>
-      <InputGroup size="sm" className='search-sty'>
-        <InputGroupAddon addonType="prepend">@</InputGroupAddon>
-        <Input type='search' placeholder="Buscar" />
-      </InputGroup>
-    </div>
+    <form>
+      <div className='search-sty d-flex justify-content-between'>
+        <i className="fas fa-search pt-1 mt-1"></i>
+        <Input type='search' bsSize="sm" className='form-control' placeholder="Buscar" />
+      </div>
+    </form>
   )
   }
 };

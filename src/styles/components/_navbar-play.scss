@@ -5,6 +5,7 @@
       color: $cut;
       padding-bottom: 1rem;
       padding-top: 1rem;
+      transition: color 0.15s linear;
       &:hover,
       &:focus {
         color:$white;
@@ -27,6 +28,15 @@
         background-color: $blue-play;
       }
     }
+  }
+
+  .navbar-toggler {
+    color: $navbar-dark-color;
+    border-color: $navbar-dark-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-dark-toggler-icon-bg;
   }
   .navbar-text {
   }

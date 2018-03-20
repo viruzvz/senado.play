@@ -22,6 +22,9 @@ import {
   DropdownItem } from 'reactstrap';
   import ReactSVG from 'react-svg';
 
+var imgStyle = {
+  width:'100px',
+};
 
 export default class NavbarTop extends React.Component {
   constructor(props) {
@@ -36,7 +39,6 @@ export default class NavbarTop extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
-
   render() {
     return (
       <div className='bg-black'>
@@ -44,14 +46,8 @@ export default class NavbarTop extends React.Component {
         <Row>
           <Col>
             <Navbar color="faded" color='black' expand="md" className='navbar-play'>
-              <NavbarBrand className='m-0 p-0' href="/">
-                <ReactSVG
-                    path='../../assets/logo.svg'
-                    callback={svg => console.log(svg)}
-                    className="img-fluid"
-                    wrapperClassName="wrapper-class-name"
-                    style={{width: 100}}
-                  />
+              <NavbarBrand href="/">
+                <img className='img-fluid' src='../../assets/logo.svg' alt='TV Senado' style={imgStyle} />
               </NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
@@ -70,9 +66,9 @@ export default class NavbarTop extends React.Component {
                   </NavItem>
                 </Nav>
                 <Nav className="ml-auto" navbar>
-                  <NavItem>
-                    <InputSearch></InputSearch>
-                  </NavItem>
+
+                  <InputSearch></InputSearch>
+
                 </Nav>
               </Collapse>
             </Navbar>

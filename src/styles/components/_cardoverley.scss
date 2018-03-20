@@ -1,0 +1,38 @@
+.cardOverley {
+	position: relative;
+	.cardMiddle {
+		transition: .5s ease;
+		opacity: 0;
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		text-align: center;
+	}
+	.cardBody {
+		min-height: 175px;
+	}
+	&:hover .cardBody {
+		transition: .5s ease;
+		background-color: $white !important;
+		color: #666;
+	}
+	.cardCircle {
+		border-radius: 50%;
+	}
+ 	img {
+		opacity: 1;
+		display: block;
+		width: 100%;
+		height: auto;
+		transition: .5s ease;
+		backface-visibility: hidden;
+	}
+	&:hover img {
+		opacity: 0.3;
+	}
+	&:hover .cardMiddle {
+		opacity: 1;
+	}
+}
