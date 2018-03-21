@@ -1,5 +1,7 @@
 .cardOverley {
 	position: relative;
+	height: 100%;
+	background-color: none !important;
 	.cardMiddle {
 		transition: .5s ease;
 		opacity: 0;
@@ -11,7 +13,7 @@
 		text-align: center;
 	}
 	.cardBody {
-		min-height: 175px;
+		
 	}
 	&:hover .cardBody {
 		transition: .5s ease;
