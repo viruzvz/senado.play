@@ -19,7 +19,7 @@
 .bg-blue-play {background-color: $blue-play;}
 .bg-red-cord {background-color: $red-cord;}
 
-// SYSTEM TYPOGRAPHY
+// SYSTEM SIZE
 
 .size--large {font-size: $large}
 .size--medium {font-size: $medium}
@@ -28,3 +28,43 @@
 .size--small {font-size: $small}
 .size--milli {font-size: $milli}
 
+// SYSTEM LINK
+
+.link--white {
+	color: $cut;
+	transition: $linktransition;
+	border: none;
+	&:hover, &:focus, &:active {
+		color: $white;
+		border: none;
+		outline: none;
+		text-decoration: none;
+	}
+}
+.link--dark {
+	color: $gray-fox;
+	transition: $linktransition;
+	border: none;
+	&:hover, &:focus, &:active {
+		color: $blue-play;
+		border: none;
+		outline: none;
+		text-decoration: none;
+	}
+}
+.link--blueplay {
+	color: $blue-play;
+	transition: $linktransition;
+	border: none;
+	&:hover, &:focus, &:active {
+		color: $red-cord;
+		border: none;
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+// SYSTEM Z-INDEX 
+.zindex-fixed {
+	z-index: $zindex-fixed;
+}

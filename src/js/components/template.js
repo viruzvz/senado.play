@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarTop from './navBar.js';
+import NavbarPlay from './navbarPlay.js';
 import ContentFluid from './contentfluid.js';
 import Divider from './divider.js';
 import ContentMiddle from './contentMiddle.js';
@@ -10,7 +10,7 @@ export default class TemplateApp extends React.Component {
   render() {
     return (
 		<div>
-			<NavbarTop></NavbarTop>
+			<NavbarPlay></NavbarPlay>
 			<ContentFluid></ContentFluid>
 			<Divider className='divider bg-blue-play'></Divider>
 			<ContentMiddle></ContentMiddle>

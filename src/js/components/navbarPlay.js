@@ -26,7 +26,7 @@ var imgStyle = {
   width:'100px',
 };
 
-export default class NavbarTop extends React.Component {
+export default class NavbarPlay extends React.Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
