@@ -7,7 +7,7 @@ import Timer from './timer.js';
 export default class Cards extends React.Component {
   render() {
   return (
-      <Card className='rounded-0 border-0 mb-3 cardOverley bg-black'>
+      <Card className='rounded-0 border-0 cardOverley bg-black'>
         <CardImg top width="100%" src={this.props.src} alt="Card image cap" />
         
         {this.props.timer ?

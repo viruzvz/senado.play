@@ -78,12 +78,12 @@ export default class ContentMiddle extends React.Component {
 						<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
 			        </Row>
 					<Row className='mb-4'>
-						<Col className='cut'>aa</Col>
-						<Col className='cut'>bb</Col>
-						<Col className='cut'>cc</Col>
-						<Col className='cut'>dd</Col>
-						<Col className='cut'>ee</Col>
-						<Col className='cut'>ff</Col>
+						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=399'></Cards></Col>
+						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=398'></Cards></Col>
+						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=397'></Cards></Col>
+						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=396'></Cards></Col>
+						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=395'></Cards></Col>
+						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=393'></Cards></Col>
 					</Row>
 			        <Row className='text-center'>
 						<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
