@@ -9,15 +9,25 @@ export default class Cards extends React.Component {
   return (
       <Card className='rounded-0 border-0 mb-3 cardOverley bg-black'>
         <CardImg top width="100%" src={this.props.src} alt="Card image cap" />
+        
+        {this.props.timer ?
         <Timer className='timer bg-black px-2 white' text='2:32'></Timer>
+        :
+        null
+        }
+
         <div className='cardMiddle cardCircle bg-cut'>
           <BtnPlay className='fas fa-play-circle size--large gray-dark'></BtnPlay>
         </div>
+        {this.props.cardbody ?
         <CardBody className='cardBody cut'>
           <CardTitle className='size--regular red-cord font-weight-bold'>{this.props.title}</CardTitle>
           <CardSubtitle className='size--small'>{this.props.subtitle}</CardSubtitle>
           <CardText>{this.props.text}</CardText>
         </CardBody>
+        :
+        null
+        }
       </Card>
   );
 }
