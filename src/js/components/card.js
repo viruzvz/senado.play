@@ -7,7 +7,7 @@ import Timer from './timer.js';
 export default class Cards extends React.Component {
   render() {
   return (
-      <Card className='rounded-0 border-0 cardOverley bg-black'>
+      <Card className='rounded-0 border-0 card-overley bg-black'>
         <CardImg top width="100%" src={this.props.src} alt="Card image cap" />
         
         {this.props.timer ?
@@ -16,11 +16,24 @@ export default class Cards extends React.Component {
         null
         }
 
-        <div className='cardMiddle cardCircle bg-cut'>
+        {this.props.top ?
+        <div className='top bg-cut'>
           <BtnPlay className='fas fa-play-circle size--large gray-dark'></BtnPlay>
         </div>
+        :
+        null
+        }
+
+        {this.props.middle ?
+        <div className='middle bg-cut'>
+          <BtnPlay className='fas fa-play-circle size--large gray-dark'></BtnPlay>
+        </div>
+        :
+        null
+        }
+
         {this.props.cardbody ?
-        <CardBody className='cardBody cut'>
+        <CardBody className='overley cut'>
           <CardTitle className='size--regular red-cord font-weight-bold'>{this.props.title}</CardTitle>
           <CardSubtitle className='size--small'>{this.props.subtitle}</CardSubtitle>
           <CardText>{this.props.text}</CardText>
@@ -28,6 +41,7 @@ export default class Cards extends React.Component {
         :
         null
         }
+
       </Card>
   );
 }

@@ -1,21 +1,20 @@
-.cardOverley {
+.card-overley {
 	position: relative;
 	height: 100%;
 	background-color: none !important;
-	.cardMiddle {
-		transition: .5s ease;
-		opacity: 0;
-		position: absolute;
+
+	.top {
+		@extend %card-default;
 		top: 25%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		text-align: center;
 	}
-	.cardBody {
+	.middle {
+		@extend %card-default;
+		top: 50%;
+	}
+	.overley {
 		
 	}
-	&:hover .cardBody {
+	&:hover .overley {
 		transition: .5s ease;
 		background-color: $white !important;
 		color: #666;
@@ -34,7 +33,7 @@
 	&:hover img {
 		opacity: 0.3;
 	}
-	&:hover .cardMiddle {
+	&:hover .top, &:hover .middle {
 		opacity: 1;
 	}
 }

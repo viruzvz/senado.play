@@ -36,7 +36,7 @@ export default class ContentMiddle extends React.Component {
 				<ScrollableAnchor id={'section1'}>
 					<div>
 					<Row className='mb-4'>
-						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=402' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></Col>
+						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=402' timer cardbody top title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=401' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria ti XVI,'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=400' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></Col>
 					</Row>
@@ -78,12 +78,30 @@ export default class ContentMiddle extends React.Component {
 						<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
 			        </Row>
 					<Row className='mb-4'>
-						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=399'></Cards></Col>
+						<Col className='cut'><Cards middle src='https://unsplash.it/118/200?image=399'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=398'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=397'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=396'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=395'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=393'></Cards></Col>
+					</Row>
+			        </div>
+		        </ScrollableAnchor>
+
+		        <ScrollableAnchor id={'section4'}>
+		        	<div>
+			        <Row className='mb-4 text-left'>
+						<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
+			        </Row>
+					<Row className='mb-4'>
+						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=206' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simpleem sendo utilizado desde o século XVI,'></Cards></Col>
+						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=212' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de teutilizado desde o século XVI,'></Cards></Col>
+						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=208' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da izado desde o século XVI,'></Cards></Col>
+					</Row>
+					<Row className='mb-4'>
+						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=209' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></Col>
+						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=210' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográdesde o século XVI,'></Cards></Col>
+						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=211' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsumográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></Col>
 					</Row>
 			        <Row className='text-center'>
 						<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
