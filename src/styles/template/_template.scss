@@ -18,7 +18,7 @@
 .bg-white {background-color: $white;}
 .bg-blue-play {background-color: $blue-play;}
 .bg-red-cord {background-color: $red-cord;}
-
+.bg-caption-gradient {@extend %caption-gradient;}
 // SYSTEM SIZE
 
 .size--large {font-size: $large}

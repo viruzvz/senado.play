@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 export default class Record extends React.Component {
   render() {
     return (
-      <div className='record bg-gray-basic'>
-        <div className='mr-1 record-live ml-1 bg-red-cord'></div>
-        <span className='cut size--small ml-1 mr-1'>AO VIVO</span>
-      </div>
+	<div {...this.props}>
+		{this.props.children}
+		<div className='record-live bg-red-cord'></div>
+		<span className='size--small ml-1 mr-1 font-weight-bold'>{this.props.text}</span>
+	</div>
     );
   }
 }
