@@ -1,0 +1,74 @@
+[{
+    "capa": {
+        "principal": [],
+        "secao1": {
+            "cards": [{
+                "singleimg":true,
+                "src":"https://unsplash.it/318/180?image=400",
+                "record":true,
+                "cardbody":true,
+                "hovertop":true,
+                "title":"Título 00",
+                "subtitle":"Subtítulo 00",
+                "text":"Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.",
+                "hovermiddle":false,
+                "timer":null
+            }, {
+                "singleimg":true,
+                "src":"https://unsplash.it/318/180?image=401",
+                "record":true,
+                "cardbody":true,
+                "hovertop":true,
+                "title":"Título 01",
+                "subtitle":"Subtítulo 01",
+                "text":"Lorem Ipsum é simplesmente uma simulação de texto da indústria ti XVI.",
+                "hovermiddle":false,
+                "timer":null
+            }, {
+                "singleimg":true,
+                "src":"https://unsplash.it/318/180?image=402",
+                "record":true,
+                "cardbody":true,
+                "hovertop":true,
+                "title":"Título 02",
+                "subtitle":"Subtítulo 02",
+                "text":"Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos.",
+                "hovermiddle":false,
+                "timer":null
+            }, {
+                "singleimg":true,
+                "src":"https://unsplash.it/318/180?image=403",
+                "record":false,
+                "cardbody":true,
+                "hovertop":true,
+                "title":"Título 03",
+                "subtitle":"Subtítulo 03",
+                "text":"Lorem Ipsum é simplesmente uma simulação de texto da indústria tipogrizado desde o século XVI.",
+                "hovermiddle":false,
+                "timer":"1:23"
+            }, {
+                "singleimg":true,
+                "src":"https://unsplash.it/318/180?image=404",
+                "record":true,
+                "cardbody":true,
+                "hovertop":true,
+                "title":"Título 04",
+                "subtitle":"Subtítulo 04",
+                "text":"Lorem Ipsum é simple de impressos, e vem sendo utilizado desde o século XVI.",
+                "hovermiddle":false,
+                "timer":"2:35"
+            }, {
+                "singleimg":true,
+                "src":"https://unsplash.it/318/180?image=405",
+                "record":true,
+                "cardbody":true,
+                "hovertop":true,
+                "title":"Título 05",
+                "subtitle":"Subtítulo 05",
+                "text":"Lorem Ipsum é simplesmente uma simulação de texto, e vem sendo utilizado desde o século XVI.",
+                "hovermiddle":false,
+                "timer":"5:03"
+            }]
+        }
+    }
+}]
