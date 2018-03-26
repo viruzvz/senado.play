@@ -9,9 +9,9 @@ export default class ContentFluid extends React.Component {
     return (
     	<div className='bg-gray-fox pt-3'>
         <Container>
-      		<Row>
-      			<Col className='mb-3'><Record className='bg-gray-dark record p-2 white' text='AO VIVO'></Record></Col>
-            <Col className='text-right mb-3'><Share></Share></Col>
+      		<Row className='pb-3'>
+      			<Col><Record className='bg-gray-dark record px-2 py-1 white' text='AO VIVO'></Record></Col>
+            <Col className='text-right'><Share></Share></Col>
       		</Row>
           <Row>
             <Col className='mb-3'><VideoEmbed></VideoEmbed></Col>

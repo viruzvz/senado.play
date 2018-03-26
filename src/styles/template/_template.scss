@@ -8,6 +8,7 @@
 .white {color: $white;}
 .blue-play {color: $blue-play;}
 .red-cord {color: $red-cord;}
+.shadow {text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);}
 
 .bg-negative {background-color: $negative;}
 .bg-black {background-color: $black;}
@@ -18,7 +19,7 @@
 .bg-white {background-color: $white;}
 .bg-blue-play {background-color: $blue-play;}
 .bg-red-cord {background-color: $red-cord;}
-.bg-caption-gradient {@extend %caption-gradient;}
+.bg-gradient {@extend %caption-gradient;}
 // SYSTEM SIZE
 
 .size--large {font-size: $large}
