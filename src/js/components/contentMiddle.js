@@ -5,11 +5,14 @@ import Cards from './card.js';
 import { StickyContainer, Sticky } from 'react-sticky';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import $ from 'jquery'
+import dados from '../../fixtures/dados-pagina-principal.json'
 
 export default class ContentMiddle extends React.Component {
 	constructor(props) {
 		super(props)
+		this.datas = dados
 
+		this.state = {dados: dados}
 		this.initEvents()
 	}
 
@@ -64,7 +67,7 @@ export default class ContentMiddle extends React.Component {
 		          }
 				</Sticky>
 			<Container>
-
+					{dataBuild({data: this.state.dados, id: 'section1'})}
 					<div id="section1"> 
 						<Row className='mb-4'>
 							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=402' record singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
@@ -160,3 +163,25 @@ export default class ContentMiddle extends React.Component {
     );
   }
 }
+
+var dataBuild = props => (
+	<div id={props.id}>
+		<Row className='mb-4'>
+			<CardsItems  cards={props.data[0].capa.secao1.cards}/>
+		</Row>
+		<Row className='text-center'>
+			<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
+		</Row>
+	</div>
+)
+
+var CardsItems = props => {
+	return props.cards.map(function (el, i) {
+		return Item(el, i)
+	})
+}
+
+
+var Item = (props, key) => (
+	<Col className='cut' key={Math.random()}><a className='card-overley' href='#'><Cards src={props.src} timer={props.timer} record={props.record} singleimg={props.record} cardbody={props.record} hovertop={props.record} title={props.title} subtitle={props.subtitle} text={props.text}></Cards></a></Col>
+)

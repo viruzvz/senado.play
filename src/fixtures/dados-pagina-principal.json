@@ -49,7 +49,7 @@
             }, {
                 "singleimg":true,
                 "src":"https://unsplash.it/318/180?image=404",
-                "record":true,
+                "record":false,
                 "cardbody":true,
                 "hovertop":true,
                 "title":"Título 04",
@@ -60,7 +60,7 @@
             }, {
                 "singleimg":true,
                 "src":"https://unsplash.it/318/180?image=405",
-                "record":true,
+                "record":false,
                 "cardbody":true,
                 "hovertop":true,
                 "title":"Título 05",
