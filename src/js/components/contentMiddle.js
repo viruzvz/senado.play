@@ -19,11 +19,25 @@ export default class ContentMiddle extends React.Component {
 
 	navBarClick(e) {
 		e.preventDefault();
+		var $currentTarget = $(e.currentTarget)
+		var _this = this
+		console.log(this)
+		
 		//$(document).off("scroll") TODO:Terminar função baseada no link:
 		//https://jsfiddle.net/cse_tushar/Dxtyu/141/
 
 		$('.menuStick-link').removeClass('active')
-		debugger
+		$currentTarget.addClass('active')
+		var $target = $($currentTarget.data('target'))
+		
+		
+		
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top+2
+		}, 500, 'swing', function () {
+			window.location.hash = target
+			// $(document.body).on('scroll', onScroll)
+		})
 	}
 
   render() {
@@ -34,8 +48,8 @@ export default class ContentMiddle extends React.Component {
 				<NavSec></NavSec>
 				</Row>
 			</Container>
-			<Container>
-					<Row className='mb-4' id="section1">
+			<Container id="section1">
+					<Row className='mb-4'>
 						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=402' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=401' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria ti XVI,'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=400' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></Col>
@@ -50,11 +64,11 @@ export default class ContentMiddle extends React.Component {
 						<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
 			    </Row>
 			    
-					<Row className='mb-4 text-left' >
+					<Row className='mb-4 text-left' id="section2">
 						<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
 			    </Row>
 
-					<Row className='mb-4' id="section2">
+					<Row className='mb-4'>
 						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=406' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simpleem sendo utilizado desde o século XVI,'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=407' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de teutilizado desde o século XVI,'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/318/180?image=408' timer cardbody title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da izado desde o século XVI,'></Cards></Col>
@@ -68,11 +82,11 @@ export default class ContentMiddle extends React.Component {
 						<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
 			    </Row>
 
-			    <Row className='mb-4 text-left'>
+			    <Row className='mb-4 text-left' id="section3">
 						<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
 			    </Row>
 
-					<Row className='mb-4' id="section3">
+					<Row className='mb-4'>
 						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=399'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=398'></Cards></Col>
 						<Col className='cut'><Cards src='https://unsplash.it/118/200?image=397'></Cards></Col>
