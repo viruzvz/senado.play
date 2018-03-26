@@ -14,6 +14,12 @@ export default class NavSec extends React.Component {
           <NavItem data-target='#section3' className="menuStick-link">
             <NavLink className='text-uppercase font-weight-bold size--regular link--white' href="#section3">Menu Body</NavLink>
           </NavItem>
+          <NavItem data-target='#section4' className="menuStick-link">
+            <NavLink className='text-uppercase font-weight-bold size--regular link--white' href="#section4">Menu Body</NavLink>
+          </NavItem>
+          <NavItem data-target='#section5' className="menuStick-link">
+            <NavLink className='text-uppercase font-weight-bold size--regular link--white' href="#section4">Menu Body</NavLink>
+          </NavItem>
         </Nav>
     );
   }

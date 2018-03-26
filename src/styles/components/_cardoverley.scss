@@ -1,26 +1,30 @@
-.cardOverley {
+.card-overley {
 	position: relative;
 	height: 100%;
-	background-color: none !important;
-	.cardMiddle {
-		transition: .5s ease;
-		opacity: 0;
-		position: absolute;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  .card {
+    height: 100%;
+  }
+  .hoverplay {
+    @extend %hover-default;
+  }
+	.top {
 		top: 25%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		text-align: center;
 	}
-	.cardBody {
-		
+	.middle {
+		top: 50%;
 	}
-	&:hover .cardBody {
+	.hover {
+	}
+	&:hover .hover {
 		transition: .5s ease;
 		background-color: $white !important;
 		color: #666;
 	}
-	.cardCircle {
+	.card-circle {
 		border-radius: 50%;
 	}
  	img {
@@ -31,10 +35,32 @@
 		transition: .5s ease;
 		backface-visibility: hidden;
 	}
+  &:hover {
+    text-decoration: none;
+  }
 	&:hover img {
 		opacity: 0.3;
 	}
-	&:hover .cardMiddle {
+	&:hover .hoverplay {
 		opacity: 1;
 	}
+}
+
+.cardimg-triple {
+	height: 180px;
+	img {
+		object-fit: cover;
+		height: 100%;
+		padding-left: 0.5px;
+		padding-right: 0.5px;
+	}
+}
+
+.cardimg-title {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.text-shadow {
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }

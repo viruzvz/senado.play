@@ -3,12 +3,16 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.width30 {
-  max-width: 30%;
-  float: left;
-}
+<<<<<<< HEAD
+
 .menuStick-link.active {
   a {
     color: #fff;
   }
 }
+=======
+.width30 {
+  max-width: 30%;
+  float: left;
+}
+>>>>>>> develop
