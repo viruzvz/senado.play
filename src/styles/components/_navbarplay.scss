@@ -12,9 +12,9 @@
       }
     }
     .show > .nav-link,
-    .active > .nav-link,
+    .current > .nav-link,
     .nav-link.show,
-    .nav-link.active {
+    .nav-link.current {
       color: $white;
       position: relative;
       font-weight: bold;

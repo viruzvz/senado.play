@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Container, Row, Col, Button } from 'reactstrap';
-import Header from './header.js';
+import Navi from './nav.js';
 import Divider from './divider.js';
 
 export default class Footer extends React.Component {
@@ -11,13 +11,13 @@ export default class Footer extends React.Component {
     	<Divider className='p-2 bg-gray-fox'></Divider>
 		<div className='bg-black py-3'>
 			<Container>
-				<Row>
-					<Header></Header>
+				<Row className='mb-3'>
+					<Navi classUl='nav' classLi='nav-item mr-2 size--regular text-uppercase font-weight-bold' classA='nav-link link--cut'></Navi>
 				</Row>
-				<Row>
+				<Row className='mb-3'>
 					<Col>
 						<dl>
-							<dt className='blue-play mb-3'>Body Menu</dt>
+							<dt className='blue-play mb-3 size--regular'>Body Menu</dt>
 							<dd className='cut size--small'>Body Menu</dd>
 							<dd className='cut size--small'>Body Menu</dd>
 							<dd className='cut size--small'>Body Menu</dd>
@@ -26,7 +26,7 @@ export default class Footer extends React.Component {
 					</Col>
 					<Col>
 						<dl>
-							<dt className='blue-play mb-3'>Body Menu</dt>
+							<dt className='blue-play mb-3 size--regular'>Body Menu</dt>
 							<dd className='cut size--small'>Body Menu</dd>
 							<dd className='cut size--small'>Body Menu</dd>
 							<dd className='cut size--small'>Body Menu</dd>
@@ -35,7 +35,7 @@ export default class Footer extends React.Component {
 					</Col>
 					<Col>
 						<dl>
-							<dt className='blue-play mb-3'>Body Menu</dt>
+							<dt className='blue-play mb-3 size--regular'>Body Menu</dt>
 							<dd className='cut size--small'>Body Menu</dd>
 							<dd className='cut size--small'>Body Menu</dd>
 							<dd className='cut size--small'>Body Menu</dd>
@@ -44,7 +44,7 @@ export default class Footer extends React.Component {
 					</Col>
 					<Col>
 						<dl>
-							<dt className='blue-play mb-3'>Body Menu</dt>
+							<dt className='blue-play mb-3 size--regular'>Body Menu</dt>
 							<dd className='cut size--small'>Body Menu</dd>
 							<dd className='cut size--small'>Body Menu</dd>
 							<dd className='cut size--small'>Body Menu</dd>
@@ -53,7 +53,7 @@ export default class Footer extends React.Component {
 					</Col>
 					<Col>
 						<dl>
-							<dt className='blue-play mb-3'>Body Menu</dt>
+							<dt className='blue-play mb-3 size--regular'>Body Menu</dt>
 							<dd className='cut size--small'>Body Menu</dd>
 							<dd className='cut size--small'>Body Menu</dd>
 							<dd className='cut size--small'>Body Menu</dd>

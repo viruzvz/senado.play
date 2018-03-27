@@ -20,7 +20,7 @@ export default class Share extends React.Component {
   render() {
     return (
       <Dropdown  direction="left" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle color='link' size='ms' className='size--small link--white px-0'>
+        <DropdownToggle color='link' size='ms' className='size--small link--cut px-0'>
           <i className="fas fa-share"></i> COMPARTILHAR
         </DropdownToggle>
         <DropdownMenu>

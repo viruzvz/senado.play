@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import InputSearch from './inputSearch.js';
-import Header from './header.js';
+import Navi from './nav.js';
 
 import {
   Container,
@@ -48,10 +48,7 @@ render() {
                 </NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
-
-                <Header></Header>
-
-
+                    <Navi classUl='navbar-nav mx-auto' classLi='nav-item text-uppercase mx-2 size--regular' classA='nav-link link--cut'></Navi>
                     <Nav className="ml-auto" navbar>
                         <InputSearch></InputSearch>
                     </Nav>

@@ -1,15 +1,18 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import NavbarPlay from './navbarPlay.js';
+import {Container, Row, Col,} from 'reactstrap';
 
-// The Header creates links that can be used to navigate
-// between routes.
 const Header = () => (
 
-    <ul>
-      <li><NavLink exact activeClassName="current" to='/'>Home</NavLink></li>
-      <li><NavLink exact activeClassName="current" to='/about'>About</NavLink></li>
-    </ul>
+<div className='bg-black'>
+	<Container>
+		<Row>
+			<Col>
+				<NavbarPlay></NavbarPlay>
+			</Col>
+		</Row>
+	</Container>
+</div>
+);
 
-)
-
-export default Header
+export default Header;
