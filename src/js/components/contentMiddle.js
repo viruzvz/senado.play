@@ -67,7 +67,7 @@ export default class ContentMiddle extends React.Component {
 		          }
 				</Sticky>
 			<Container>
-					<Setor cards={this.state.dados[0].capa.secao1.cards} id='section1'/>
+					<ContainerPlay cards={this.state.dados[0].capa.secao1.cards} id='section1'/>
 
 					{/* <div id="section1"> 
 						<Row className='mb-4'>
@@ -165,7 +165,7 @@ export default class ContentMiddle extends React.Component {
   }
 }
 
-class Setor extends React.Component {
+class ContainerPlay extends React.Component {
 	constructor(props) {
 		super(props)
 
@@ -174,17 +174,13 @@ class Setor extends React.Component {
 		this.rows = this.formatDatasFromProps(props.cards)		
 	}
 
-	componentDidMount() {
-		this.formatDatasFromProps(this.props)
-	}
-
 	formatDatasFromProps(cards) {
 		var row = []
 		var rows = []
 		var _this = this
 
 		$.each(cards, function (i, el) {
-			if((i+1) % 4 != 0) {
+			if(i % 3 != 0) {
 				row.push(el)
 			} else {
 				rows.push(row)
@@ -204,7 +200,7 @@ class Setor extends React.Component {
 				return <Row className='mb-4' key={Math.random()}>
 					
 					{row.map(function (colCard, i) {
-						return <Col className='cut' key={Math.random()}><a className='card-overley' href='#'><Cards src={colCard.src} timer={colCard.timer} record={colCard.record} singleimg={colCard.singleimg} cardbody={colCard.cardbody} hovertop={colCard.hovertop} title={colCard.title} subtitle={colCard.subtitle} text={colCard.text}></Cards></a></Col>
+						return <Col xs="12" sm="4" className='cut' key={Math.random()}><a className='card-overley' href='#'><Cards src={colCard.src} timer={colCard.timer} record={colCard.record} singleimg={colCard.singleimg} cardbody={colCard.cardbody} hovertop={colCard.hovertop} title={colCard.title} subtitle={colCard.subtitle} text={colCard.text}></Cards></a></Col>
 					})}
 				</Row>
 			})}

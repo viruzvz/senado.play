@@ -38,7 +38,7 @@
             }, {
                 "singleimg":true,
                 "src":"https://unsplash.it/318/180?image=403",
-                "record":true,
+                "record":false,
                 "cardbody":true,
                 "hovertop":true,
                 "title":"Título 03",
@@ -49,7 +49,7 @@
             }, {
                 "singleimg":true,
                 "src":"https://unsplash.it/318/180?image=404",
-                "record":true,
+                "record":false,
                 "cardbody":true,
                 "hovertop":false,
                 "title":"Título 04",
@@ -60,7 +60,18 @@
             }, {
                 "singleimg":true,
                 "src":"https://unsplash.it/318/180?image=405",
-                "record":true,
+                "record":false,
+                "cardbody":true,
+                "hovertop":true,
+                "title":"Título 05",
+                "subtitle":"Subtítulo 05",
+                "text":"Lorem Ipsum é simplesmente uma simulação de texto, e vem sendo utilizado desde o século XVI.",
+                "hovermiddle":false,
+                "timer":"5:03"
+            }, {
+                "singleimg":true,
+                "src":"https://unsplash.it/318/180?image=405",
+                "record":false,
                 "cardbody":true,
                 "hovertop":true,
                 "title":"Título 05",
