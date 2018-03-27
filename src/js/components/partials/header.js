@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarPlay from './navbarPlay.js';
+import NavbarPlay from '../navbarPlay.js';
 import {Container, Row, Col,} from 'reactstrap';
 
 const Header = () => (

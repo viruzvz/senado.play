@@ -1,7 +1,7 @@
 import React from 'react';
-import ContentFluid from './contentFluid.js';
-import ContentMiddle from './contentMiddle.js';
-import Divider from './divider.js';
+import ContentFluid from '../contentFluid.js';
+import ContentMiddle from '../contentMiddle.js';
+import Divider from '../divider.js';
 
 const Home = () => (
 	<div>

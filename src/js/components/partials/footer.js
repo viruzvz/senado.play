@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Container, Row, Col, Button } from 'reactstrap';
-import Navi from './nav.js';
-import Divider from './divider.js';
+import Navi from '../nav.js';
+import Divider from '../divider.js';
 
 export default class Footer extends React.Component {
   render() {
