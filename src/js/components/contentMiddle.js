@@ -12,7 +12,7 @@ export default class ContentMiddle extends React.Component {
 		super(props)
 		this.datas = dados
 
-		this.state = {dados: dados}
+		this.state = {dados: dados, containers: dados[0].capa.containers}
 		this.initEvents()
 	}
 
@@ -67,75 +67,10 @@ export default class ContentMiddle extends React.Component {
 		          }
 				</Sticky>
 			<Container>
-					<ContainerPlay cards={this.state.dados[0].capa.secao1.cards} id='section1'/>
-
-					{/* <div id="section1"> 
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=402' record singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=401' record singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria ti XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=400' record singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=403' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipogrizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=404' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simple de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=405' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='text-center'>
-							<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
-						</Row>
-					</div> */}
-
-					<div id="section2">
-						<Row className='mb-4 text-left'>
-							<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=406' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simpleem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=407' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de teutilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=408' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da izado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=409' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=410' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográdesde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=411' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsumográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='text-center'>
-							<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
-						</Row>
-					</div>
-
-					<div id="section3">
-						<Row className='mb-4 text-left'>
-							<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=399'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=398'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=397'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=396'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=395'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=393'></Cards></a></Col>
-						</Row>
-					</div>
-
-					<div id="section4">
-						<Row className='mb-4 text-left'>
-							<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=206' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simpleem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=212' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de teutilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=208' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da izado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=209' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=210' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográdesde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=211' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsumográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='text-center'>
-							<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
-						</Row>
-					</div>
+					<ContainerPlay cards={this.state.containers[0].cards} id={this.state.containers[0].id} />
+					<ContainerPlay cards={this.state.containers[1].cards} id={this.state.containers[1].id} title={this.state.containers[1].title}/>
+					<ContainerPlay cols="6" cards={this.state.containers[2].cards} id={this.state.containers[2].id} title={this.state.containers[2].title}/>
+					<ContainerPlay cards={this.state.containers[3].cards} id={this.state.containers[3].id} title={this.state.containers[3].title}/>
 
 					<div id="section5">
 						<Row className='mb-4 text-left'>
@@ -157,7 +92,6 @@ export default class ContentMiddle extends React.Component {
 						</Row>
 					</div>
 
-
 			</Container>
 			</StickyContainer>
 		</div>
@@ -171,6 +105,9 @@ class ContainerPlay extends React.Component {
 
 		this.state = {rows:[], newRow:undefined}
 		this.id = props.id
+		this.title = props.title
+		this.cols = props.cols ? props.cols : 3
+		
 		this.rows = this.formatDatasFromProps(props.cards)		
 	}
 
@@ -178,9 +115,10 @@ class ContainerPlay extends React.Component {
 		var row = []
 		var rows = []
 		var _this = this
+		var cols = this.cols
 
 		$.each(cards, function (i, el) {
-			if(i % 3 != 0) {
+			if(i % cols != 0) {
 				row.push(el)
 			} else {
 				rows.push(row)
@@ -195,12 +133,22 @@ class ContainerPlay extends React.Component {
 	render () {
 		var _this = this
 		var rows = _this.rows
+		var cols = this.cols
+		var _sm = Math.floor(12 / cols)
 		return <div id={this.id}> 
+			{this.title ? <Row className='mb-4 text-left'>
+											<Col><p className='border-bottom white m-0 pb-2'>{this.title.toUpperCase()}</p></Col>
+										</Row> 
+									: null }
 			{rows.map(function (row, i) {
 				return <Row className='mb-4' key={Math.random()}>
 					
 					{row.map(function (colCard, i) {
-						return <Col xs="12" sm="4" className='cut' key={Math.random()}><a className='card-overley' href='#'><Cards src={colCard.src} timer={colCard.timer} record={colCard.record} singleimg={colCard.singleimg} cardbody={colCard.cardbody} hovertop={colCard.hovertop} title={colCard.title} subtitle={colCard.subtitle} text={colCard.text}></Cards></a></Col>
+						if (colCard.type == 'tripleimg') {
+							return <Col xs="12" sm={_sm} className='cut' key={Math.random()}><a className='card-overley' href={colCard.src}><Cards src={colCard.src} timer={colCard.timer} record={colCard.record} singleimg={colCard.singleimg} cardbody={colCard.cardbody} hovertop={colCard.hovertop} title={colCard.title} subtitle={colCard.subtitle} text={colCard.text}></Cards></a></Col>
+						} else {
+							return <Col xs="12" sm={_sm} className='cut' key={Math.random()}><a className='card-overley' href={colCard.src}><Cards src={colCard.src} timer={colCard.timer} record={colCard.record} singleimg={colCard.singleimg} cardbody={colCard.cardbody} hovertop={colCard.hovertop} hovermiddle={colCard.hovermiddle} title={colCard.title} subtitle={colCard.subtitle} text={colCard.text}></Cards></a></Col>
+						}
 					})}
 				</Row>
 			})}
