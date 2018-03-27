@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import InputSearch from './inputSearch.js';
+import Header from './header.js';
 
 import {
   Container,
@@ -39,43 +40,23 @@ export default class NavbarPlay extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
-  render() {
-    return (
-      <div className='bg-black'>
-      <Container>
-        <Row>
-          <Col>
+render() {
+        return (
             <Navbar color="faded" color='black' expand="md" className='navbar-play'>
-              <NavbarBrand href="/">
-                <img className='img-fluid' src='../../assets/logo.svg' alt='TV Senado' style={imgStyle} />
-              </NavbarBrand>
-              <NavbarToggler onClick={this.toggle} />
-              <Collapse isOpen={this.state.isOpen} navbar>
-                <Nav className="mx-auto" navbar>
-                  <NavItem active className='mr-2 text-uppercase size--regular'>
-                    <NavLink href="#">Ao vivo</NavLink>
-                  </NavItem>
-                  <NavItem className='mr-2 text-uppercase size--regular'>
-                    <NavLink href="#">Plenário e Comissões</NavLink>
-                  </NavItem>
-                  <NavItem className='mr-2 text-uppercase size--regular'>
-                    <NavLink href="#">Senadores</NavLink>
-                  </NavItem>
-                  <NavItem className='mr-2 text-uppercase size--regular'>
-                    <NavLink href="#">Programas</NavLink>
-                  </NavItem>
-                </Nav>
-                <Nav className="ml-auto" navbar>
+                <NavbarBrand href="/">
+                    <img className='img-fluid' src='../../assets/logo.svg' alt='TV Senado' style={imgStyle} />
+                </NavbarBrand>
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
 
-                  <InputSearch></InputSearch>
+                <Header></Header>
 
-                </Nav>
-              </Collapse>
+
+                    <Nav className="ml-auto" navbar>
+                        <InputSearch></InputSearch>
+                    </Nav>
+                </Collapse>
             </Navbar>
-          </Col>
-        </Row>
-      </Container>
-      </div>
-    );
-  }
+        );
+    }
 }

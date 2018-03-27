@@ -1,6 +1,7 @@
 import React from 'react';
+import { render } from 'react-dom';
 import { Container, Row, Col, Button } from 'reactstrap';
-import NavSec from './nav.js';
+import Header from './header.js';
 import Divider from './divider.js';
 
 export default class Footer extends React.Component {
@@ -10,6 +11,9 @@ export default class Footer extends React.Component {
     	<Divider className='p-2 bg-gray-fox'></Divider>
 		<div className='bg-black py-3'>
 			<Container>
+				<Row>
+					<Header></Header>
+				</Row>
 				<Row>
 					<Col>
 						<dl>

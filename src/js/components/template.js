@@ -1,19 +1,16 @@
 import React from 'react';
-import NavbarPlay from './navbarPlay.js';
-import ContentFluid from './contentfluid.js';
+import Navegation from './navigation.js';
 import Divider from './divider.js';
-import ContentMiddle from './contentMiddle.js';
+import Main from './main.js';
 import Footer from './footer.js';
-
+import {Container, Row, Col,} from 'reactstrap';
 
 export default class TemplateApp extends React.Component {
   render() {
     return (
 		<div>
-			<NavbarPlay></NavbarPlay>
-			<ContentFluid></ContentFluid>
-			<Divider className='divider bg-blue-play'></Divider>
-			<ContentMiddle></ContentMiddle>
+			<Navegation></Navegation>
+			<Main></Main>
 			<Footer></Footer>
 		</div>
     );

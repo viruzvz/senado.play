@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
-import NavSec from './nav.js';
+import NavSec from './navSec.js';
 import Cards from './card.js';
 import { StickyContainer, Sticky } from 'react-sticky';
 import ScrollableAnchor from 'react-scrollable-anchor';
