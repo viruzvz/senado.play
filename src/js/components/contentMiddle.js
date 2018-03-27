@@ -67,8 +67,9 @@ export default class ContentMiddle extends React.Component {
 		          }
 				</Sticky>
 			<Container>
-					{dataBuild({data: this.state.dados, id: 'section1'})}
-					<div id="section1"> 
+					<Setor cards={this.state.dados[0].capa.secao1.cards} id='section1'/>
+
+					{/* <div id="section1"> 
 						<Row className='mb-4'>
 							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=402' record singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
 							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=401' record singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria ti XVI,'></Cards></a></Col>
@@ -82,7 +83,7 @@ export default class ContentMiddle extends React.Component {
 						<Row className='text-center'>
 							<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
 						</Row>
-					</div>
+					</div> */}
 
 					<div id="section2">
 						<Row className='mb-4 text-left'>
@@ -164,24 +165,52 @@ export default class ContentMiddle extends React.Component {
   }
 }
 
-var dataBuild = props => (
-	<div id={props.id}>
-		<Row className='mb-4'>
-			<CardsItems  cards={props.data[0].capa.secao1.cards}/>
-		</Row>
+class Setor extends React.Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {rows:[], newRow:undefined}
+		this.id = props.id
+		this.rows = this.formatDatasFromProps(props.cards)		
+	}
+
+	componentDidMount() {
+		this.formatDatasFromProps(this.props)
+	}
+
+	formatDatasFromProps(cards) {
+		var row = []
+		var rows = []
+		var _this = this
+
+		$.each(cards, function (i, el) {
+			if((i+1) % 4 != 0) {
+				row.push(el)
+			} else {
+				rows.push(row)
+				row = []
+				row.push(el)
+			}
+		})
+		rows.push(row)
+		return rows
+	}
+
+	render () {
+		var _this = this
+		var rows = _this.rows
+		return <div id={this.id}> 
+			{rows.map(function (row, i) {
+				return <Row className='mb-4' key={Math.random()}>
+					
+					{row.map(function (colCard, i) {
+						return <Col className='cut' key={Math.random()}><a className='card-overley' href='#'><Cards src={colCard.src} timer={colCard.timer} record={colCard.record} singleimg={colCard.singleimg} cardbody={colCard.cardbody} hovertop={colCard.hovertop} title={colCard.title} subtitle={colCard.subtitle} text={colCard.text}></Cards></a></Col>
+					})}
+				</Row>
+			})}
 		<Row className='text-center'>
 			<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
 		</Row>
 	</div>
-)
-
-var CardsItems = props => {
-	return props.cards.map(function (el, i) {
-		return Item(el, i)
-	})
+	}
 }
-
-
-var Item = (props, key) => (
-	<Col className='cut' key={Math.random()}><a className='card-overley' href='#'><Cards src={props.src} timer={props.timer} record={props.record} singleimg={props.record} cardbody={props.record} hovertop={props.record} title={props.title} subtitle={props.subtitle} text={props.text}></Cards></a></Col>
-)

@@ -38,7 +38,7 @@
             }, {
                 "singleimg":true,
                 "src":"https://unsplash.it/318/180?image=403",
-                "record":false,
+                "record":true,
                 "cardbody":true,
                 "hovertop":true,
                 "title":"Título 03",
@@ -49,9 +49,9 @@
             }, {
                 "singleimg":true,
                 "src":"https://unsplash.it/318/180?image=404",
-                "record":false,
+                "record":true,
                 "cardbody":true,
-                "hovertop":true,
+                "hovertop":false,
                 "title":"Título 04",
                 "subtitle":"Subtítulo 04",
                 "text":"Lorem Ipsum é simple de impressos, e vem sendo utilizado desde o século XVI.",
@@ -60,7 +60,7 @@
             }, {
                 "singleimg":true,
                 "src":"https://unsplash.it/318/180?image=405",
-                "record":false,
+                "record":true,
                 "cardbody":true,
                 "hovertop":true,
                 "title":"Título 05",
