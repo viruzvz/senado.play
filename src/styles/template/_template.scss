@@ -1,4 +1,4 @@
-// SYSTEM COLORS 
+// SYSTEM COLORS
 .negative {color: $negative;}
 .black {color: $black;}
 .gray-dark {color: $gray-dark;}
@@ -22,6 +22,7 @@
 .bg-gradient {@extend %caption-gradient;}
 // SYSTEM SIZE
 
+.size--xlarge {font-size: $xlarge}
 .size--large {font-size: $large}
 .size--medium {font-size: $medium}
 .size--middle {font-size: $middle}
@@ -64,7 +65,17 @@
 	}
 }
 
-// SYSTEM Z-INDEX 
+// SYSTEM Z-INDEX
 .zindex-fixed {
 	z-index: $zindex-fixed;
+}
+.dvoqQu {
+  > div {
+    width: 100%;
+    align-items: flex-end;
+    display: flex;
+  }
+  .bg-gradient {
+    width: 100%;
+  }
 }

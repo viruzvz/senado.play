@@ -19,6 +19,7 @@
     "react-app": "^1.1.2",
     "react-dom": "^16.2.0",
     "react-iframe": "^1.1.0",
+    "react-lazy-hero": "^0.4.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-native": "^4.2.0",

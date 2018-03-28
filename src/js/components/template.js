@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './partials/header.js';
 import Divider from './divider.js';
-import Main from './main.js';
+import Main from './partials/main.js';
 import Footer from './partials/footer.js';
 
 const TemplateApp = () => (
