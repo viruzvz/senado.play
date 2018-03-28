@@ -13,7 +13,6 @@ export default class ContentMiddle extends React.Component {
 	constructor(props) {
 		super(props)
 		this.datas = dados
-
 		this.state = {dados: this.datas, containers: this.datas[0].capa.containers}
 	}
 
@@ -24,31 +23,58 @@ export default class ContentMiddle extends React.Component {
 				<NavSecPlay datas={this.state.containers}/>
 			</header>	
 			<Container>
+			        {this.props.carddefault ?
+			        <div>
 					<ContainerPlay cards={this.state.containers[0].cards} id={this.state.containers[0].id} />
 					<ContainerPlay cards={this.state.containers[1].cards} id={this.state.containers[1].id} title={this.state.containers[1].title}/>
 					<ContainerPlay cols="6" cards={this.state.containers[2].cards} id={this.state.containers[2].id} title={this.state.containers[2].title}/>
 					<ContainerPlay cards={this.state.containers[3].cards} id={this.state.containers[3].id} title={this.state.containers[3].title}/>
-
-					<div id="section5">
+			        </div>
+			        :
+			        null
+			        }
+			        {this.props.cardtriple ?
+			        <div>
+						<Row>
+							<Col xs="12" sm="6" md="4" className='cut mb-4'>
+								<Cards src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+							</Col>
+							<Col xs="12" sm="6" md="4" className='cut mb-4'>
+								<Cards src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+							</Col>
+							<Col xs="12" sm="6" md="4" className='cut mb-4'>
+								<Cards src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+							</Col>
+						</Row>
+						<Row>
+							<Col xs="12" sm="6" md="4" className='cut mb-4'>
+								<Cards src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+							</Col>
+							<Col xs="12" sm="6" md="4" className='cut mb-4'>
+								<Cards src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+							</Col>
+							<Col xs="12" sm="6" md="4" className='cut mb-4'>
+								<Cards src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+							</Col>
+						</Row>
 						<Row className='mb-4 text-left'>
 							<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
 						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'>
-								<Cards src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+						<Row>
+							<Col xs="12" sm="6" md="4" className='cut mb-4'>
+								<Cards styleClass='img-saturate' styleClass1='img-saturate' styleClass2='img-saturate' src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg  title='Meu Titulo' subtitle='Meu subtitle'></Cards>
 							</Col>
-							<Col className='cut'>
-								<Cards src1='https://unsplash.it/318/180?image=704' src2='https://unsplash.it/318/180?image=705' src3='https://unsplash.it/318/180?image=806' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+							<Col xs="12" sm="6" md="4" className='cut mb-4'>
+								<Cards styleClass='img-saturate' styleClass1='img-saturate' styleClass2='img-saturate' src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg  title='Meu Titulo' subtitle='Meu subtitle'></Cards>
 							</Col>
-							<Col className='cut'>
-								<Cards src1='https://unsplash.it/318/180?image=807' src2='https://unsplash.it/318/180?image=808' src3='https://unsplash.it/318/180?image=809' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+							<Col xs="12" sm="6" md="4" className='cut mb-4'>
+								<Cards styleClass2='img-saturate' src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg  title='Meu Titulo' subtitle='Meu subtitle'></Cards>
 							</Col>
-						</Row>
-						<Row className='text-center'>
-							<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
 						</Row>
 					</div>
-
+			        :
+			        null
+			        }
 			</Container>
 		</div>
     );
@@ -97,7 +123,7 @@ class ContainerPlay extends React.Component {
 										</Row> 
 									: null }
 			{rows.map(function (row, i) {
-				return <Row className='mb-4'  key={Math.random()}>
+				return <Row key={Math.random()}>
 					
 					{row.map(function (colCard, i) {
 						if (colCard.type == 'tripleimg') {
@@ -105,7 +131,7 @@ class ContainerPlay extends React.Component {
 										 		<Cards src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
 										 </Col>
 						} else {
-							return <Col xs="12" sm={_sm} className='cut' key={Math.random()}><a className='card-overley' href={colCard.src}><Cards src={colCard.src} timer={colCard.timer} record={colCard.record} singleimg={colCard.singleimg} cardbody={colCard.cardbody} hovertop={colCard.hovertop} hovermiddle={colCard.hovermiddle} title={colCard.title} subtitle={colCard.subtitle} text={colCard.text}></Cards></a></Col>
+							return <Col xs="12" sm={_sm} className='cut mb-4' key={Math.random()}><a className='card-overley' href={colCard.src}><Cards src={colCard.src} timer={colCard.timer} record={colCard.record} singleimg={colCard.singleimg} cardbody={colCard.cardbody} hovertop={colCard.hovertop} hovermiddle={colCard.hovermiddle} title={colCard.title} subtitle={colCard.subtitle} text={colCard.text}></Cards></a></Col>
 						}
 					})}
 				</Row>

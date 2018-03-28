@@ -7,7 +7,7 @@ const Plenario = () => (
         <div>
             <Hero headertitle='PLENÁRIO E COMISSÕES' text='text'></Hero>
             <Divider className='divider bg-blue-play'></Divider>
-            <ContentMiddle></ContentMiddle>
+            <ContentMiddle carddefault></ContentMiddle>
         </div>
 );
 

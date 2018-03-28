@@ -17,9 +17,9 @@ export default class Cards extends React.Component {
 
         {this.props.tripleimg ?
         <div className='d-flex flex-row'>
-          <a href={this.props.href} className='cardimg-triple card-overley'><CardImg className='cardimg-triple' src={this.props.src1} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name}</span></a>
-          <a href={this.props.href1} className='cardimg-triple card-overley'><CardImg className='cardimg-triple' src={this.props.src2} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name1}</span></a>
-          <a href={this.props.href2} className='cardimg-triple card-overley'><CardImg className='cardimg-triple' src={this.props.src3} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name2}</span></a>
+          <a href={this.props.href} className={`cardimg-triple card-overley ${ this.props.styleClass }`}><CardImg className='cardimg-triple' src={this.props.src1} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name}</span></a>
+          <a href={this.props.href1} className={`cardimg-triple card-overley ${ this.props.styleClass1 }`}><CardImg className='cardimg-triple' src={this.props.src2} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name1}</span></a>
+          <a href={this.props.href2} className={`cardimg-triple card-overley ${ this.props.styleClass2 }`}><CardImg className='cardimg-triple' src={this.props.src3} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name2}</span></a>
         </div>
         :
         null

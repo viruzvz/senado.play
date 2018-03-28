@@ -1,13 +1,13 @@
 import React from 'react';
-import ContentFluid from '../contentFluid.js';
+import ContentVideo from '../contentVideo.js';
 import ContentMiddle from '../contentMiddle.js';
 import Divider from '../divider.js';
 
 const Home = () => (
 	<div>
-		<ContentFluid></ContentFluid>
+		<ContentVideo breakpoint="12" embed21by9></ContentVideo>
 		<Divider className='divider bg-blue-play'></Divider>
-		<ContentMiddle></ContentMiddle>
+		<ContentMiddle carddefault></ContentMiddle>
 	</div>
 );
 
