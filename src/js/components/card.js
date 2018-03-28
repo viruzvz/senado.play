@@ -8,7 +8,7 @@ import Record from './record.js';
 export default class Cards extends React.Component {
   render() {
   return (
-      <Card className='rounded-0 border-0 bg-black'>
+      <Card className='rounded-0 border-0 bg-black' >
         {this.props.singleimg ?
         <CardImg top width="100%" src={this.props.src} alt="Card " />
         :

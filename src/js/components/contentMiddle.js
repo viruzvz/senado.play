@@ -4,134 +4,30 @@ import NavSec from './navSec.js';
 import Cards from './card.js';
 import { StickyContainer, Sticky } from 'react-sticky';
 import ScrollableAnchor from 'react-scrollable-anchor';
+
 import $ from 'jquery'
+import dados from '../../fixtures/dados-pagina-principal.json'
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
 export default class ContentMiddle extends React.Component {
 	constructor(props) {
 		super(props)
+		this.datas = dados
 
-		this.initEvents()
-	}
-
-	initEvents() {
-		$(document.body).on('click', '.menuStick-link', this.navBarClick.bind(this))
-		// $(document).on('scroll', this.navBarScroll.bind(this)) // TODO: Fazer o scroll para o menu fazer active nos itens
-	}
-
-	navBarClick(e) {
-		e.preventDefault();
-		var $currentTarget = $(e.currentTarget)
-		var _this = this
-		$(document).on('scroll')
-		
-		if ($currentTarget.hasClass('menuStick-link')) {
-			$('.menuStick-link').removeClass('active')
-			var $target = $($currentTarget.data('target'))
-			
-			$('html, body').stop().animate({
-				'scrollTop': $target.offset().top+2
-			}, 500, 'swing', function () {
-				$currentTarget[0].classList.add('active')
-				$(document).on('scroll', _this.navBarScroll.bind(_this))
-			})
-		}
+		this.state = {dados: this.datas, containers: this.datas[0].capa.containers}
 	}
 
   render() {
     return (
 		<div className='bg-gray-dark'>
-			<StickyContainer>
-				<Sticky>
-		          {
-		            ({
-		              style,
-		              isSticky,
-		              wasSticky,
-		              distanceFromTop,
-		              distanceFromBottom,
-		              calculatedHeight
-		            }) => {
-		              return (
-		              	<header className='bg-gray-dark py-3 zindex-fixed' style={style}>
-		              	<Container>
-		              		<Row>
-		                	<NavSec></NavSec>
-		                	</Row>
-		                </Container>
-		                </header>
-		              )
-		            }
-		          }
-				</Sticky>
+			<header className='bg-gray-dark py-3 zindex-fixed menuStick'>
+				<NavSecPlay datas={this.state.containers}/>
+			</header>	
 			<Container>
-
-					<div id="section1"> 
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=402' record singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=401' record singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria ti XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=400' record singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=403' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipogrizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=404' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simple de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=405' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='text-center'>
-							<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
-						</Row>
-					</div>
-
-					<div id="section2">
-						<Row className='mb-4 text-left'>
-							<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=406' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simpleem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=407' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de teutilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=408' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da izado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=409' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=410' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográdesde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=411' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsumográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='text-center'>
-							<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
-						</Row>
-					</div>
-
-					<div id="section3">
-						<Row className='mb-4 text-left'>
-							<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=399'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=398'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=397'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=396'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=395'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards hovermiddle singleimg src='https://unsplash.it/118/200?image=393'></Cards></a></Col>
-						</Row>
-					</div>
-
-					<div id="section4">
-						<Row className='mb-4 text-left'>
-							<Col><p className='border-bottom white m-0 pb-2'>BODY MENU</p></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=206' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simpleem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=212' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de teutilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=208' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da izado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='mb-4'>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=209' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=210' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográdesde o século XVI,'></Cards></a></Col>
-							<Col className='cut'><a className='card-overley' href='#'><Cards src='https://unsplash.it/318/180?image=211' timer singleimg cardbody hovertop title='Meu Titulo' subtitle='Meu subtitle' text='Lorem Ipsumográfica e de impressos, e vem sendo utilizado desde o século XVI,'></Cards></a></Col>
-						</Row>
-						<Row className='text-center'>
-							<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
-						</Row>
-					</div>
+					<ContainerPlay cards={this.state.containers[0].cards} id={this.state.containers[0].id} />
+					<ContainerPlay cards={this.state.containers[1].cards} id={this.state.containers[1].id} title={this.state.containers[1].title}/>
+					<ContainerPlay cols="6" cards={this.state.containers[2].cards} id={this.state.containers[2].id} title={this.state.containers[2].title}/>
+					<ContainerPlay cards={this.state.containers[3].cards} id={this.state.containers[3].id} title={this.state.containers[3].title}/>
 
 					<div id="section5">
 						<Row className='mb-4 text-left'>
@@ -153,10 +49,168 @@ export default class ContentMiddle extends React.Component {
 						</Row>
 					</div>
 
-
 			</Container>
-			</StickyContainer>
 		</div>
     );
   }
+}
+
+class ContainerPlay extends React.Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {rows:[], newRow:undefined}
+		this.id = props.id
+		this.title = props.title
+		this.cols = props.cols ? props.cols : 3
+		
+		this.rows = this.formatDatasFromProps(props.cards)		
+	}
+
+	formatDatasFromProps(cards) {
+		var row = []
+		var rows = []
+		var _this = this
+		var cols = this.cols
+
+		$.each(cards, function (i, el) {
+			if(i == 0 || i % cols != 0) {
+				row.push(el)
+			} else {
+				rows.push(row)
+				row = []
+				row.push(el)
+			}
+		})
+		rows.push(row)
+		return rows
+	}
+
+	render () {
+		var _this = this
+		var rows = _this.rows
+		var cols = this.cols
+		var _sm = Math.floor(12 / cols)
+		return <div id={this.id}> 
+			{this.title ? <Row className='mb-4 text-left zzz'>
+											<Col><p className='border-bottom white m-0 pb-2'>{this.title.toUpperCase()}</p></Col>
+										</Row> 
+									: null }
+			{rows.map(function (row, i) {
+				return <Row className='mb-4'  key={Math.random()}>
+					
+					{row.map(function (colCard, i) {
+						if (colCard.type == 'tripleimg') {
+							return <Col className='cut'>
+										 		<Cards src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src3='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='#' href1='#' href2='#' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+										 </Col>
+						} else {
+							return <Col xs="12" sm={_sm} className='cut' key={Math.random()}><a className='card-overley' href={colCard.src}><Cards src={colCard.src} timer={colCard.timer} record={colCard.record} singleimg={colCard.singleimg} cardbody={colCard.cardbody} hovertop={colCard.hovertop} hovermiddle={colCard.hovermiddle} title={colCard.title} subtitle={colCard.subtitle} text={colCard.text}></Cards></a></Col>
+						}
+					})}
+				</Row>
+			})}
+		<Row className='text-center'>
+			<Col><Button outline color="secondary">Ver Mais</Button>{' '}</Col>
+		</Row>
+	</div>
+	}
+}
+
+class NavSecPlay extends React.Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {datas: props.datas, active:undefined, fixed:false}
+
+	}
+
+	componentDidMount () {
+		this.sticker = $('.menuStick')[0]
+		this.offsetTop = this.sticker.offsetTop
+		this.links = this.getDataIds(this.props.datas)
+		this.initEvents()
+	}
+
+	getDataIds(containers) {
+		var ids = []
+		$.each(containers, function (i, el) {
+			ids.push(el.id)
+		})
+		return ids
+	}
+
+	initEvents() {
+		$(document.body).on('click', '.menuStick-link', this.navBarClick.bind(this))
+		$(window).on('scroll', this.navBarScroll.bind(this))
+	}
+
+	navBarClick(e) {
+		e.preventDefault();
+		var $currentTarget = $(e.currentTarget)
+		var _this = this
+		$(document).off('scroll', _this.navBarScroll)
+		
+		if ($currentTarget.hasClass('menuStick-link')) {
+			$('.menuStick-link').removeClass('active')
+			var $target = $($currentTarget.data('target'))
+			
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top+2
+			}, 500, 'swing', function () {
+				$currentTarget[0].classList.add('active')
+				$(document).on('scroll', _this.navBarScroll.bind(_this))
+				_this.state.active = $currentTarget.data('target')
+			})
+		}
+	}
+
+	navBarScroll(e) {
+		var sticker = this.sticker
+		var windowTopOffset = window.pageYOffset
+		var _this = this
+		if(window.pageYOffset >= this.offsetTop) {
+			if (!this.state.fixed) {
+				sticker.classList.add('sticky')
+				this.state.fixed = true
+			}
+		} else {
+			this.state.fixed = false
+			this.sticker.classList.remove('sticky')
+		}
+
+		$.each(this.links, function (i, id) {
+			var el = $("#"+id)[0]
+			var elOffsetTop = el ? el.offsetTop : null
+			
+			var elOffsetHeight = el ? el.offsetHeight : null
+
+			if(el && windowTopOffset >= elOffsetTop && windowTopOffset < ( elOffsetTop + elOffsetHeight ) ) {
+				$('.menuStick-link').removeClass('active')
+				$('.menuStick-link[data-target="#'+ id +'"]').addClass('active')
+			} else {
+
+				if(windowTopOffset < _this.offsetTop) {
+					$('.menuStick-link').removeClass('active')
+				}
+			}
+		})
+
+	}
+
+	render() {
+		var datas = this.state.datas
+		var _this = this
+		return <Container>
+							<Row>
+								<Nav>
+								{this.state.datas.map(function (el, i){
+									return <NavItem key={Math.random()} data-target={"#"+el.id} className="menuStick-link" active={"#"+el.id == _this.state.active ? true : false}>
+														<NavLink className='text-uppercase font-weight-bold size--regular link--cut' href={"#"+el.id}>{el.title}</NavLink>
+												</NavItem>
+								})}
+								</Nav>
+							</Row>
+				</Container>
+	}
 }
