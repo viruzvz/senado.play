@@ -121,26 +121,35 @@ class NavSecPlay extends React.Component {
 	constructor(props) {
 		super(props)
 
-		this.state = {datas: props.datas, active:undefined}
+		this.state = {datas: props.datas, active:undefined, fixed:false}
 
-		this.initEvents()
 	}
 
 	componentDidMount () {
 		this.sticker = $('.menuStick')[0]
 		this.offsetTop = this.sticker.offsetTop
+		this.links = this.getDataIds(this.props.datas)
+		this.initEvents()
+	}
+
+	getDataIds(containers) {
+		var ids = []
+		$.each(containers, function (i, el) {
+			ids.push(el.id)
+		})
+		return ids
 	}
 
 	initEvents() {
 		$(document.body).on('click', '.menuStick-link', this.navBarClick.bind(this))
-		$(window).on('scroll', this.navBarScroll.bind(this)) // TODO: Fazer o scroll para o menu fazer active nos itens
+		$(window).on('scroll', this.navBarScroll.bind(this))
 	}
 
 	navBarClick(e) {
 		e.preventDefault();
 		var $currentTarget = $(e.currentTarget)
 		var _this = this
-		$(document).on('scroll')
+		$(document).off('scroll', _this.navBarScroll)
 		
 		if ($currentTarget.hasClass('menuStick-link')) {
 			$('.menuStick-link').removeClass('active')
@@ -150,7 +159,7 @@ class NavSecPlay extends React.Component {
 				'scrollTop': $target.offset().top+2
 			}, 500, 'swing', function () {
 				$currentTarget[0].classList.add('active')
-				// $(document).on('scroll', _this.navBarScroll.bind(_this))
+				$(document).on('scroll', _this.navBarScroll.bind(_this))
 				_this.state.active = $currentTarget.data('target')
 			})
 		}
@@ -158,29 +167,35 @@ class NavSecPlay extends React.Component {
 
 	navBarScroll(e) {
 		var sticker = this.sticker
-		var nextSibling = sticker.nextSibling
-		var nextSiblingPaddingTop = window.getComputedStyle(nextSibling, null).paddingTop
-		var stickerHeight = sticker.offsetHeight
-
+		var windowTopOffset = window.pageYOffset
+		var _this = this
 		if(window.pageYOffset >= this.offsetTop) {
-			sticker.classList.add('sticky')
-			nextSibling.style.setProperty('padding-top', this.sumStyleValues(nextSiblingPaddingTop, stickerHeight)+'px')
+			if (!this.state.fixed) {
+				sticker.classList.add('sticky')
+				this.state.fixed = true
+			}
 		} else {
+			this.state.fixed = false
 			this.sticker.classList.remove('sticky')
-			// nextSibling.style.setProperty('padding-top', undefined)
 		}
 
+		$.each(this.links, function (i, id) {
+			var el = $("#"+id)[0]
+			var elOffsetTop = el ? el.offsetTop : null
+			
+			var elOffsetHeight = el ? el.offsetHeight : null
 
-	}
+			if(el && windowTopOffset >= elOffsetTop && windowTopOffset < ( elOffsetTop + elOffsetHeight ) ) {
+				$('.menuStick-link').removeClass('active')
+				$('.menuStick-link[data-target="#'+ id +'"]').addClass('active')
+			} else {
 
-	sumStyleValues(val1, val2) {
-		val1 = val1 ? val1 : 0
-		val2 = val2 ? val2 : 0
+				if(windowTopOffset < _this.offsetTop) {
+					$('.menuStick-link').removeClass('active')
+				}
+			}
+		})
 
-		val1 = typeof val1 != "number" ? val1.match(/\d*/)[0] : val1
-		val2 = typeof val2 != "number" ? val2.match(/\d*/)[0] : val2
-
-		return val1+val2
 	}
 
 	render() {
