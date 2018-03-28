@@ -39,7 +39,7 @@ export default class Cards extends React.Component {
 
         {this.props.hovertop ?
         <div className='hoverplay top bg-cut'>
-          <BtnPlay className='fas fa-play-circle size--large gray-dark'></BtnPlay>
+          <BtnPlay className='fas fa-play-circle size--xlarge gray-dark'></BtnPlay>
         </div>
         :
         null
@@ -47,7 +47,7 @@ export default class Cards extends React.Component {
 
         {this.props.hovermiddle ?
         <div className='hoverplay middle bg-cut'>
-          <BtnPlay className='fas fa-play-circle size--large gray-dark'></BtnPlay>
+          <BtnPlay className='fas fa-play-circle size--xlarge gray-dark'></BtnPlay>
         </div>
         :
         null
