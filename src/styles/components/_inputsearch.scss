@@ -3,15 +3,17 @@
 	color: $cut;
 	input {
 		outline: none;
+
 	}
 	input[type='search'] {
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
 	background-color: transparent;
-	width: 55px;
+	width: 60px;
 	transition: all .5s;
 	border-radius: none;
 	border-color: $black;
+  font-family: FontAwesome;
 		&:focus {
 			width: 130px;
 			background-color: $gray-basic;
@@ -21,9 +23,10 @@
 		&::placeholder {
 			color:$cut;
 		}
+
 	}
 	input::-webkit-search-decoration,
 	input::-webkit-search-cancel-button {
-		display: none; 
+		display: none;
 	}
 }

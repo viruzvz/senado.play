@@ -6,8 +6,8 @@ export default class InputSearch extends React.Component {
   return (
     <form>
       <div className='search-sty d-flex justify-content-between'>
-        <i className="fas fa-search pt-1 mt-1"></i>
-        <Input type='search' bsSize="sm" className='form-control' placeholder="Buscar" />
+
+        <Input type='search' bsSize="sm" className='form-control' placeholder="&#xF002;  Buscar" />
       </div>
     </form>
   )

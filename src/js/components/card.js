@@ -4,6 +4,7 @@ import { Card, CardImg, CardText, CardBody,
 import BtnPlay from './btnplay.js';
 import Timer from './timer.js';
 import Record from './record.js';
+import { Link } from 'react-router-dom';
 
 export default class Cards extends React.Component {
   render() {
@@ -17,9 +18,9 @@ export default class Cards extends React.Component {
 
         {this.props.tripleimg ?
         <div className='d-flex flex-row'>
-          <a href={this.props.href} className={`cardimg-triple card-overley ${ this.props.styleClass }`}><CardImg className='cardimg-triple' src={this.props.src1} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name}</span></a>
-          <a href={this.props.href1} className={`cardimg-triple card-overley ${ this.props.styleClass1 }`}><CardImg className='cardimg-triple' src={this.props.src2} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name1}</span></a>
-          <a href={this.props.href2} className={`cardimg-triple card-overley ${ this.props.styleClass2 }`}><CardImg className='cardimg-triple' src={this.props.src3} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name2}</span></a>
+          <Link to={this.props.href} className={`cardimg-triple card-overley ${ this.props.styleClass }`}><CardImg className='cardimg-triple' src={this.props.src} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name}</span></Link>
+          <Link to={this.props.href1} className={`cardimg-triple card-overley ${ this.props.styleClass1 }`}><CardImg className='cardimg-triple' src={this.props.src1} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name1}</span></Link>
+          <Link to={this.props.href2} className={`cardimg-triple card-overley ${ this.props.styleClass2 }`}><CardImg className='cardimg-triple' src={this.props.src2} alt="Card " /><span className='cardimg-title white size--regular text-center shadow bg-gradient'>{this.props.name2}</span></Link>
         </div>
         :
         null
@@ -38,8 +39,11 @@ export default class Cards extends React.Component {
         }
 
         {this.props.hovertop ?
-        <div className='hoverplay top bg-cut'>
-          <BtnPlay className='fas fa-play-circle size--xlarge gray-dark'></BtnPlay>
+        <div className='hoverplay top'>
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-1x cut size--large ml-1"></i>
+            <i class="fa fa-play-circle fa-stack-1x gray-dark size--xlarge"></i>
+          </span>
         </div>
         :
         null
@@ -47,7 +51,7 @@ export default class Cards extends React.Component {
 
         {this.props.hovermiddle ?
         <div className='hoverplay middle bg-cut'>
-          <BtnPlay className='fas fa-play-circle size--xlarge gray-dark'></BtnPlay>
+          <BtnPlay className='fa fa-play-circle size--xlarge gray-dark'></BtnPlay>
         </div>
         :
         null
