@@ -40,9 +40,9 @@ export default class Cards extends React.Component {
 
         {this.props.hovertop ?
         <div className='hoverplay top'>
-          <span class="fa-stack">
-            <i class="fa fa-circle fa-stack-1x cut size--large ml-1"></i>
-            <i class="fa fa-play-circle fa-stack-1x gray-dark size--xlarge"></i>
+          <span className="fa-stack">
+            <i className="fa fa-circle fa-stack-1x cut size--large ml-1"></i>
+            <i className="fa fa-play-circle fa-stack-1x gray-dark size--xlarge"></i>
           </span>
         </div>
         :
