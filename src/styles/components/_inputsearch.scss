@@ -1,6 +1,6 @@
 .search-sty {
 	position: relative;
-	color: $cut;
+	color: $white;
 	input {
 		outline: none;
 
@@ -9,21 +9,26 @@
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
 	background-color: transparent;
-	width: 60px;
+	width: 15px;
+	cursor: pointer;
 	transition: all .5s;
 	border-radius: none;
 	border-color: $black;
-  font-family: FontAwesome;
+  	font-family: FontAwesome; 
 		&:focus {
-			width: 130px;
+			width: 160px;
+			font-family: inherit;
 			background-color: $gray-basic;
 			box-shadow: none;
-			color: $cut;
+			color: $white;
+			cursor: inherit;
+			&::placeholder {
+				color:transparent;
+			}
 		}
 		&::placeholder {
-			color:$cut;
+			color:$white;
 		}
-
 	}
 	input::-webkit-search-decoration,
 	input::-webkit-search-cancel-button {

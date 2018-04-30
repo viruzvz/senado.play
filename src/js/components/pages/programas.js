@@ -1,10 +1,10 @@
 import React from 'react';
 import ContentMiddle from '../contentMiddle.js';
 import Divider from '../divider.js';
-import Carousel from '../carousel.js';
+import CarouselPlay from '../carousel.js';
 const Programas = () => (
         <div>
-            <Carousel></Carousel>
+            <CarouselPlay></CarouselPlay>
             <Divider className='divider bg-blue-play'></Divider>
             <ContentMiddle carddefault></ContentMiddle>
         </div>

@@ -1,0 +1,24 @@
+.carousel-play {
+	.carousel-indicators {
+		top:30px;
+	}
+	.carousel-item {
+		.carousel-caption {
+			text-align: left;
+			h3 {
+				font-size: $xlarge;
+			}
+			p {
+				display: inline;
+			}
+		}
+	}
+}
+.img-absolute {
+	position: absolute;
+	right: 10%;
+	bottom:0;
+}
+.img-size {
+	width: 500px;
+}
