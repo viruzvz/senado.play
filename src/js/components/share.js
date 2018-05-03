@@ -25,9 +25,9 @@ export default class Share extends React.Component {
           <i className="fa fa-share"></i> COMPARTILHAR
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem className='size--small'><i class="fa fa-facebook"></i> Facebook</DropdownItem>
-          <DropdownItem className='size--small'><i class="fa fa-twitter"></i> Twitter</DropdownItem>
-          <DropdownItem className='size--small'><i class="fa fa-instagram"></i> Instagram</DropdownItem>
+          <DropdownItem className='size--small'><i className="fa fa-facebook"></i> Facebook</DropdownItem>
+          <DropdownItem className='size--small'><i className="fa fa-twitter"></i> Twitter</DropdownItem>
+          <DropdownItem className='size--small'><i className="fa fa-instagram"></i> Instagram</DropdownItem>
         </DropdownMenu>
       </Dropdown>
       </div>

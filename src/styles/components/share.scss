@@ -13,10 +13,22 @@
 		padding:0;
 	}
 	.dropdown-item {
+		padding: 3px 6px;
 		color:$white;
+		a {
+			color:$white;
+			display: block;
+			padding: 3px 6px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
 		&:hover, &:focus {
 			background-color: $gray-basic;
 			color: $blue-play;
+			a {
+				color: $blue-play;
+			}
 		}
 	}
 	.dropdown-item:not(:last-child) {

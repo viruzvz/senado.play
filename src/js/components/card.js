@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
-import BtnPlay from './btnplay.js';
 import Timer from './timer.js';
 import Record from './record.js';
 import { Link } from 'react-router-dom';
