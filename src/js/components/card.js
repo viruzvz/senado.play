@@ -50,8 +50,11 @@ export default class Cards extends React.Component {
         }
 
         {this.props.hovermiddle ?
-        <div className='hoverplay middle bg-cut'>
-          <BtnPlay className='fa fa-play-circle size--xlarge gray-dark'></BtnPlay>
+        <div className='hoverplay middle'>
+          <span className="fa-stack">
+            <i className="fa fa-circle fa-stack-1x cut size--large ml-1"></i>
+            <i className="fa fa-play-circle fa-stack-1x gray-dark size--xlarge"></i>
+          </span>
         </div>
         :
         null

@@ -19,16 +19,18 @@ export default class Share extends React.Component {
 
   render() {
     return (
-      <Dropdown  direction="left" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <div className='share'>
+      <Dropdown  direction="up" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle color='link' size='ms' className='size--small link--cut px-0'>
           <i className="fa fa-share"></i> COMPARTILHAR
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>Facebook</DropdownItem>
-          <DropdownItem>Twitter</DropdownItem>
-          <DropdownItem>Instagram</DropdownItem>
+          <DropdownItem className='size--small'><i class="fa fa-facebook"></i> Facebook</DropdownItem>
+          <DropdownItem className='size--small'><i class="fa fa-twitter"></i> Twitter</DropdownItem>
+          <DropdownItem className='size--small'><i class="fa fa-instagram"></i> Instagram</DropdownItem>
         </DropdownMenu>
       </Dropdown>
+      </div>
     );
   }
 }

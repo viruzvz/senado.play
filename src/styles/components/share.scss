@@ -1,0 +1,25 @@
+.share {
+	.dropup, .dropdown {
+	    display: inline;
+	}
+	.show > .dropdown-menu {
+		opacity:1;
+		left:-50px !important;
+	}
+	.dropdown-menu {
+		transition: all 200ms ease-in;
+		opacity:0;
+		background-color: $gray-fox;
+		padding:0;
+	}
+	.dropdown-item {
+		color:$white;
+		&:hover, &:focus {
+			background-color: $gray-basic;
+			color: $blue-play;
+		}
+	}
+	.dropdown-item:not(:last-child) {
+		border-bottom: 1px dotted $gray-basic;
+	}
+}

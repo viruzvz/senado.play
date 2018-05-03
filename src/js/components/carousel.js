@@ -85,18 +85,28 @@ class CarouselPlay extends Component {
     });
 
     return (
-
-      <Carousel
-        activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
-        className='carousel-play'
-      >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-      </Carousel>
+      <div className='u-Relative'>
+        <Carousel
+          activeIndex={activeIndex}
+          next={this.next}
+          previous={this.previous}
+          className='carousel-play'
+        >
+          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+          {slides}
+          <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+          <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        </Carousel>
+        <div className='flutuante'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col'>
+                <h1 className='shadow white size--large'>PROGRAMAS</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
