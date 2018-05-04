@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { Container, Row, Col, Button } from 'reactstrap';
 import Navi from '../nav.js';
 import Divider from '../divider.js';
+import SocialNetwork from '../socialnetwork.js';
 
 export default class Footer extends React.Component {
   render() {
@@ -13,6 +14,7 @@ export default class Footer extends React.Component {
 			<Container>
 				<Row className='mb-3'>
 					<Navi classUl='nav' classLi='nav-item mr-2 size--regular text-uppercase font-weight-bold' classA='nav-link link--cut'></Navi>
+					<Col className='text-right'><SocialNetwork></SocialNetwork></Col>
 				</Row>
 				<Row className='mb-3'>
 					<Col>

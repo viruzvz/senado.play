@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import Record from './record.js';
 import Share from './share.js';
 import VideoEmbed from './videoEmbed.js';
-
+import SocialNetwork from './socialnetwork.js';
 export default class ContentVideo extends React.Component {
   constructor(props) {
     super(props) 
@@ -15,7 +15,11 @@ export default class ContentVideo extends React.Component {
         <Container>
       		<Row className='pb-3'>
             <Col><Record className='bg-gray-dark record px-2 py-1 white' text='AO VIVO NA TV SENADO'></Record></Col>
-            <Col className='text-right'><Share></Share></Col>
+            <Col className='text-right'>
+              <SocialNetwork></SocialNetwork>
+              <span className='mx-3'></span>
+              <Share></Share>
+            </Col>
       		</Row>
           <Row>
             <Col xs={this.props.breakpoint} className='mb-3'>
