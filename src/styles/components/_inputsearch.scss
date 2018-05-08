@@ -35,3 +35,16 @@
 		display: none;
 	}
 }
+@include media-breakpoint-down(sm) {
+	.search-sty {
+		input[type='search'] {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left: 6px;
+			margin-right: 6px;
+			&:focus {
+				width:100%;
+			}
+		}
+	}
+}

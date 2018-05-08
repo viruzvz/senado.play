@@ -50,7 +50,6 @@ render() {
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Navi classUl='navbar-nav mx-auto' classLi='nav-item text-uppercase mx-2 size--regular' classA='nav-link link--cut'></Navi>
                     <Nav className="ml-auto" navbar>
-                        <i className='fa fa-list'></i>
                         <InputSearch></InputSearch>
                     </Nav>
                 </Collapse>

@@ -29,6 +29,13 @@
 .size--regular {font-size: $regular}
 .size--small {font-size: $small}
 .size--milli {font-size: $milli}
+@include media-breakpoint-down(sm) { 
+	.size--xlarge {font-size: $large}
+	.size--large {font-size: $medium}
+	.size--medium {font-size: $middle}
+	.size--middle {font-size: $regular}
+}
+
 // SYSTEM LINK
 
 .link--cut {

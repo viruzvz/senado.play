@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
-import NavSec from './navSec.js';
+
 import Cards from './card.js';
 import $ from 'jquery'
 import dados from '../../fixtures/dados-pagina-principal.json'
@@ -227,7 +227,7 @@ class NavSecPlay extends React.Component {
 		var _this = this
 		return <Container>
 							<Row>
-								<Nav>
+								<Nav className="navsecplay">
 								{this.state.datas.map(function (el, i){
 									return <NavItem key={Math.random()} data-target={"#"+el.id} className="menuStick-link" active={"#"+el.id == _this.state.active ? true : false}>
 														<NavLink className='text-uppercase font-weight-bold size--regular link--cut' href={"#"+el.id}>{el.title}</NavLink>

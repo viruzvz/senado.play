@@ -10,6 +10,10 @@
 	}
 	.hoverplay {
 		@extend %hover-default;
+		.fa-stack {
+			width: 5em;
+			height: 1em;
+		}
 	}
 	.top {
 		top: 25%;
@@ -31,7 +35,8 @@
 		opacity: 1;
 		display: block;
 		width: 100%;
-		height: auto;
+		height: 25vh;
+		object-fit: cover;
 		transition: .5s ease;
 		backface-visibility: hidden;
 	}
@@ -61,4 +66,26 @@
 }
 .img-saturate {
 	filter: saturate(0);
+}
+
+@include media-breakpoint-only(md) { 
+	.card-overley {
+		img {
+			height: 20vh;
+		}
+	}
+}
+@include media-breakpoint-only(sm) { 
+	.card-overley {
+		img {
+			height: 15vh;
+		}
+	}
+}
+@include media-breakpoint-only(xs) { 
+	.card-overley {
+		img {
+			height: 30vh;
+		}
+	}
 }

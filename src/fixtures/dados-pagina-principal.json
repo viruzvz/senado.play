@@ -2,11 +2,11 @@
     "capa": {
         "principal": [],
         "containers": [{
-            "id": "mais-vistas-no-play",
-            "title": "Mais vistas no play",
+            "id": "canais-web",
+            "title": "Canais web",
             "cards": [{
                 "singleimg":true,
-                "src":"https://unsplash.it/318/180?image=400",
+                "src":"https://unsplash.it/460/280?image=400",
                 "record":true,
                 "cardbody":true,
                 "hovertop":true,
@@ -30,7 +30,7 @@
                 "href": "/ao/infinito/e/alem"
             }, {
                 "singleimg":true,
-                "src":"https://unsplash.it/318/180?image=402",
+                "src":"https://unsplash.it/918/580?image=402",
                 "record":true,
                 "cardbody":true,
                 "hovertop":true,
@@ -42,7 +42,7 @@
                 "href": "/somewhere/over/the/rainbow"
             }, {
                 "singleimg":true,
-                "src":"https://unsplash.it/318/180?image=403",
+                "src":"https://unsplash.it/218/180?image=403",
                 "record":false,
                 "cardbody":true,
                 "hovertop":true,
@@ -54,7 +54,7 @@
                 "href": "/to/some/unknown/place"
             }, {
                 "singleimg":true,
-                "src":"https://unsplash.it/318/180?image=404",
+                "src":"https://unsplash.it/618/380?image=404",
                 "record":false,
                 "cardbody":true,
                 "hovertop":false,

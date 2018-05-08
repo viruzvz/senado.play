@@ -9,22 +9,22 @@ import {
 
 const items = [
   {
-    src: 'https://picsum.photos/1800/500/?random',
-    src2: '../../assets/executive.png',
-    altText: 'Slide 1',
-    caption: 'Slide 1',
-    header: 'Slide 1 Header'
+    src: '../../assets/background-programas/textura_agenda_00085.png',
+    src2: '../../assets/reporters/senado-noticias.png',
+    altText: 'Senado Notícias',
+    caption: 'NOTÍCIAS',
+    header: 'SENADO'
   },
   {
-    src: 'https://picsum.photos/1800/500/?image=167',
-    src2: '../../assets/executive.png',
+    src: '../../assets/background-programas/textura_agumento_00219.png',
+    src2: '../../assets/reporters/argumento.png',
     altText: 'Slide 2',
     caption: 'Slide 2',
     header: 'Slide 2 Header'
   },
   {
-    src: 'https://picsum.photos/1800/500/?image=345',
-    src2: '../../assets/executive.png',
+    src: '../../assets/background-programas/textura Assunto_03081.png',
+    src2: '../../assets/reporters/assunto-de-estado.png',
     altText: 'Slide 3',
     caption: 'Slide 3',
     header: 'Slide 3 Header'
@@ -77,8 +77,8 @@ class CarouselPlay extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} />
-          <img className='img-absolute img-size img-fluid' src={item.src2} alt={item.altText} />
+          <img className='img-size-src' src={item.src} alt={item.altText} />
+          <img className='img-absolute img-size-src2 img-fluid' src={item.src2} alt={item.altText} />
           <CarouselCaption captionText={item.caption} captionHeader={item.header} />
         </CarouselItem>
       );

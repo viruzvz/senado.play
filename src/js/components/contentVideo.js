@@ -17,7 +17,8 @@ export default class ContentVideo extends React.Component {
             <Col><Record className='bg-gray-dark record px-2 py-1 white' text='AO VIVO NA TV SENADO'></Record></Col>
             <Col className='text-right'>
               <SocialNetwork></SocialNetwork>
-              <span className='mx-3'></span>
+            </Col>
+            <Col className='text-right' md='3'>
               <Share></Share>
             </Col>
       		</Row>
