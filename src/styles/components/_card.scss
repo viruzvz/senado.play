@@ -1,8 +1,6 @@
 .card-overley {
 	position: relative;
 	height: 100%;
-	display: flex;
-	flex-direction: column;
 	min-width: 0;
 	word-wrap: break-word;
 	.card {
@@ -37,7 +35,6 @@
 		width: 100%;
 		height: 25vh;
 		object-fit: cover;
-		transition: .5s ease;
 		backface-visibility: hidden;
 	}
   &:hover {
@@ -54,7 +51,7 @@
 	height: 180px;
 	img {
 		object-fit: cover;
-		height: 100%;
+		height: 180px;
 		padding-left: 0.5px;
 		padding-right: 0.5px;
 	}
@@ -68,21 +65,21 @@
 	filter: saturate(0);
 }
 
-@include media-breakpoint-only(md) { 
+@include media-breakpoint-only(md) {
 	.card-overley {
 		img {
 			height: 20vh;
 		}
 	}
 }
-@include media-breakpoint-only(sm) { 
+@include media-breakpoint-only(sm) {
 	.card-overley {
 		img {
 			height: 15vh;
 		}
 	}
 }
-@include media-breakpoint-only(xs) { 
+@include media-breakpoint-only(xs) {
 	.card-overley {
 		img {
 			height: 30vh;
