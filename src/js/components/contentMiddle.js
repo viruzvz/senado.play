@@ -52,7 +52,7 @@ export default class ContentMiddle extends React.Component {
 								<Cards src='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='/' href1='/' href2='/' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
 							</Col>
 							<Col xs="12" sm="6" md="4" className='cut mb-4'>
-								<Cards src='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador612.jpg' name='Eunício Oliveira' src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src2='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador615.jpg' name2='José Pimentel' href='/' href1='/' href2='/' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
+								<Cards src='../../assets/avatar-senador.jpg' name='Eunício Oliveira' src1='http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3396.jpg' name1='Tasso Jereissati' src2='../../assets/avatar-senadora.jpg' name2='José Pimentel' href='/' href1='/' href2='/' tripleimg cardbody title='Meu Titulo' subtitle='Meu subtitle'></Cards>
 							</Col>
 						</Row>
 						<Row className='mb-4 text-left'>

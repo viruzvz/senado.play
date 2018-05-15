@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import Record from './record.js';
 import Share from './share.js';
 import VideoEmbed from './videoEmbed.js';
+import Player from './videoMp4.js';
 import SocialNetwork from './socialnetwork.js';
 export default class ContentVideo extends React.Component {
   constructor(props) {
@@ -44,10 +45,17 @@ export default class ContentVideo extends React.Component {
             :
             null
             }
+            {this.props.mp4 ?
+            <Player></Player>
+            :
+            null
+            }
             </Col>
             {this.props.textwrapper ?
             <Col className='mb-3'>
+              <p className="size--middle mb-1 red-cord"><strong>{this.props.produto}</strong></p>
               <h1 className="size--medium white border-bottom pb-3">{this.props.title}</h1>
+              <p className="cut text-right"><small>{this.props.date}</small></p>
               <p className='cut'>{this.props.text}</p>
             </Col>
             :
