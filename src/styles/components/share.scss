@@ -5,10 +5,10 @@
 	}
 	.show > .dropdown-menu {
 		opacity:1;
-		left:-50px !important;
+	
 	}
 	.dropdown-menu {
-		transition: all 200ms ease-in;
+		transition: all 200ms ease-in-out;
 		opacity:0;
 		background-color: $gray-fox;
 		padding:0;

@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 
 import Cards from './card.js';
+import BtnPrograms from './btnPrograms.js';
 import $ from 'jquery'
 import dados from '../../fixtures/dados-pagina-principal.json'
 import { Nav, NavItem, NavLink } from 'reactstrap';
@@ -20,7 +21,12 @@ export default class ContentMiddle extends React.Component {
 			<header className='zindex-fixed menuStick'>
 				<NavSecPlay datas={this.state.containers}/>
 			</header>
-			<Container>
+			<Container className='position-relative'>
+					<Row>
+						<Col>
+							<BtnPrograms styleName='btn-fixed share rounded-circle--dropdown'></BtnPrograms>
+						</Col>
+					</Row>
 			        {this.props.carddefault ?
 			        <div>
 					<ContainerPlay cards={this.state.containers[0].cards} id={this.state.containers[0].id} />
