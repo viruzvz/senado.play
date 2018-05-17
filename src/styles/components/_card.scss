@@ -5,6 +5,11 @@
 	word-wrap: break-word;
 	.card {
 		height: 100%;
+		animation: fadein 2.5s;
+		@keyframes fadein {
+		    from { opacity: 0; }
+		    to   { opacity: 1; }
+		}
 	}
 	.hoverplay {
 		@extend %hover-default;

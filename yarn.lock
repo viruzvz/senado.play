@@ -981,6 +981,10 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
+bootstrap-carousel-swipe@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/bootstrap-carousel-swipe/-/bootstrap-carousel-swipe-0.0.6.tgz#1539feeb9ea476e1d10d1c309d659bd16259ff0a"
+
 bootstrap@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0.tgz#ceb03842c145fcc1b9b4e15da2a05656ba68469a"

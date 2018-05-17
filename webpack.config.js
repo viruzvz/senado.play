@@ -41,8 +41,7 @@ module.exports = {
       hash:true,
     }),
     new ExtractTextPlugin('[name].[hash].css'),
-    extractCss,
-
+    extractCss
   ],
   // Loaders configuration
   // We are telling webpack to use "babel-loader" for .js and .jsx files

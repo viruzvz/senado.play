@@ -86,3 +86,10 @@
     width: 100%;
   }
 }
+
+
+@include media-breakpoint-down(sm) {
+	.nospace-y--xs {
+		padding: 0;
+	}
+}

@@ -17,14 +17,18 @@
 	    height: 50px;
 	    box-shadow: 0 0 20px -3px rgba(0,0,0,.45), 0 8px 6px -6px rgba(0,0,0,.8);
 	    user-select: none;
-	    transition: all 50ms ease-out;
+	    transition: all 0.5s ease;
+	    animation: fadein 2.5s;
 	    margin: 2px;
-	    &:focus {
+	    &:focus,&:hover {
 	    	background-color: $red-cord;
 	    }
+		@keyframes fadein {
+		    from { opacity: 0; }
+		    to   { opacity: 1; }
+		}
 	}
 	i {
-
 	    filter: drop-shadow(0 2px 2px rgba(0,0,0,.4));
 	}
 }

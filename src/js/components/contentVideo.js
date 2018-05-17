@@ -24,7 +24,7 @@ export default class ContentVideo extends React.Component {
             </Col>
       		</Row>
           <Row>
-            <Col xs={this.props.breakpoint} className='mb-3'>
+            <Col xs={this.props.breakpoint} className='mb-3 nospace-y--xs'>
             {this.props.embed16by9 ?
             <VideoEmbed styleName='embed-responsive-16by9'></VideoEmbed>
             :

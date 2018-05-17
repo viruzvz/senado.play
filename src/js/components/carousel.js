@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'bootstrap-carousel-swipe/carousel-swipe.js';
 import {
   Carousel,
   CarouselItem,
@@ -66,7 +67,11 @@ class CarouselPlay extends Component {
     if (this.animating) return;
     this.setState({ activeIndex: newIndex });
   }
-
+  componentDidMount() {
+    $(".carousel-play").carousel({
+      swipe: 30 // percent-per-second, default is 50. Pass false to disable swipe
+    });
+  }
   render() {
     const { activeIndex } = this.state;
 
@@ -90,7 +95,8 @@ class CarouselPlay extends Component {
           activeIndex={activeIndex}
           next={this.next}
           previous={this.previous}
-          className='carousel-play'
+          ref={ref => this.carousel = ref}
+          className='carousel-play carousel-fade'
         >
           <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
           {slides}
