@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack')
 
 const extractCss = new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
@@ -33,6 +34,11 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $:"jquery",
+      jQuery:"jquery",
+      "window.jQuery":"jquery"
+    }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'My app',
